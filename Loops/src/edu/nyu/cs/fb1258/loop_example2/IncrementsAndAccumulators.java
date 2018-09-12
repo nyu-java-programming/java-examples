@@ -1,6 +1,12 @@
-package edu.nyu.cs.ab1258.loop_example2;
+package edu.nyu.cs.fb1258.loop_example2;
 
-public class PlusPlus {
+/**
+ * Comparison of popular increment techniques ++var, var++, and accumulator loops
+ * @author Foo Barstein
+ * @version 0.00012
+ *
+ */
+public class IncrementsAndAccumulators {
 
 	public static void main(String[] args) {
 
