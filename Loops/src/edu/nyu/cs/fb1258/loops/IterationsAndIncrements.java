@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.loop_example2;
+package edu.nyu.cs.fb1258.loops;
 
 /**
  * Counting iterations and showing off the behavior of the var++ operator.

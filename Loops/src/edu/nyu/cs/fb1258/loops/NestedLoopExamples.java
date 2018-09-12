@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.loop_example2;
+package edu.nyu.cs.fb1258.loops;
 
 /**
  * This program shows various permutations of nested loops, all using accumulators for simplicity.

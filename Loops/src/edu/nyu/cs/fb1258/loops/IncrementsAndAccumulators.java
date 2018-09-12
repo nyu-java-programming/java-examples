@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.loop_example2;
+package edu.nyu.cs.fb1258.loops;
 
 /**
  * Comparison of popular increment techniques ++var, var++, and accumulator loops
