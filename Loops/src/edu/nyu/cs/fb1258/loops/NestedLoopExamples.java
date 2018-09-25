@@ -13,11 +13,22 @@ public class NestedLoopExamples {
 	 * A for loop nested within another for loop.
 	 */
 	public static void nestedForLoops() {
+		
+		// print a nice welcome message
 		System.out.println("\nNested for loops:\n");
+		
+		// loop 5 times for the i values 1 thru 5
 		for (int i=1; i<=5; i++) {
-			System.out.println("i is " + i); //output the value of i
+			
+			// output the value of i
+			System.out.println("i is " + i);
+			
+			// loop 5 times for the j values 1 thru 5
 			for (int j=1; j<=5; j++) {
-				System.out.println("\tj is " + j); //output the value of j
+				
+				//output the value of j
+				System.out.println("\tj is " + j); 
+				
 			}
 		}
 	}
