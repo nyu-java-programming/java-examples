@@ -6,6 +6,7 @@ package edu.nyu.cs.fb1258.loops;
  * @version 0.00012
  *
  */
+
 public class IncrementsAndAccumulators {
 
 	public static void main(String[] args) {
@@ -55,6 +56,6 @@ public class IncrementsAndAccumulators {
 		// print out the value of the sum variable
 		System.out.println("#4 - Sum is " + sum);
 
-	}
+	} // main function
 
-}
+} // class
