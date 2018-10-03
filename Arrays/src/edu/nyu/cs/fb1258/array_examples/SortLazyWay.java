@@ -1,5 +1,7 @@
 package edu.nyu.cs.fb1258.array_examples;
 
+import java.util.Arrays;
+
 /**
  * Example of creating and sorting an array the easy way
  * @author Foo Barstein
@@ -15,7 +17,7 @@ public class SortLazyWay {
 		int[] bar = {9,2,1,20,3,199}; //declare, initialize and assign array using shorthand
 
 		//SORT ARRAY THE EASY WAY
-		java.util.Arrays.sort(bar); //use the Java API.
+		Arrays.sort(bar); //use the Java API.
 		
 		//LOOP THROUGH AN ARRAY THE EASY WAY
 		System.out.println("\nBar contains:");

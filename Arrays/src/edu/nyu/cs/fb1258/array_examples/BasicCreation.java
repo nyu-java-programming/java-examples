@@ -14,6 +14,7 @@ public class BasicCreation {
 		//example how to create an array
 		int[] x; //declaration of variable
 		x = new int[5]; //allocation of memory
+		
 		//populating the array... defining the array elements
 		x[0] = 100;
 		x[1] = 200;

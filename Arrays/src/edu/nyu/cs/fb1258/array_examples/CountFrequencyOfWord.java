@@ -5,13 +5,19 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
- * Program detects how many times a given word is found within  a given text.
+ * Program detects how many times a given word is found within a given text.
  * @author Foo Barstein
- * @version 1.2
+ * @version 1.3
  */
 
 public class CountFrequencyOfWord {
 
+	/**
+	 * Counts the number of occurrences of a given word within a given text.
+	 * @param needle The word to count occurrences of
+	 * @param haystack The text within which to search for the word
+	 * @return The number of occurrences of the word within the text
+	 */
 	public static int countFrequency(String needle, String  haystack) {
 		int counter = 0; //keeps track of how many needles we  find within the haystack
 		
@@ -30,14 +36,16 @@ public class CountFrequencyOfWord {
 
 	public static void main(String[] args) throws  FileNotFoundException {
 		//text to analyze...
-		Scanner textFile = new Scanner(new File("src/foo.txt"));
+		Scanner textFile = new Scanner(new File("src/foo.txt")); // hard-coded file name
+
+		// loop through each line of the text file and append it to a string
 		String text = ""; //this will hold the entire text file  as a string
 		while (textFile.hasNextLine()) {
 			//add each line of the text file to the string.
 			text += textFile.nextLine(); // get the whole text  in file as a string.
 		}
-				
-		//word to look for...
+		
+		//solicit the word to look for...
 		System.out.println("What word would you like to count  the frequency of?");
 		Scanner input = new Scanner(System.in);
 		String searchTerm = input.nextLine();

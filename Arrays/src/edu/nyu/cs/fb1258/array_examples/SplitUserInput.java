@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
 
  * Program asks user to enter a list of words, separated by  commas.  
- * The program breaks this string up into an array using the  split() method, and outputs each item in the array.
+ * The program breaks this string up into an array using the split() method, and outputs each item in the array.
  * @author Foo Barstein
  * @version 1.1
  */

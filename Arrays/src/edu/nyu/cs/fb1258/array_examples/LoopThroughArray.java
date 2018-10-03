@@ -28,6 +28,7 @@ public class LoopThroughArray {
 		//the same thing in shorthand for loop syntax
 		System.out.println("\nLooping through array with  shorthand for loop");
 		for (String el : x) {
+			Integer.parseInt(el);
 			System.out.println(el);
 		}
 		
