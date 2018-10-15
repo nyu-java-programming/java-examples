@@ -11,6 +11,12 @@ public class BasicCreation {
 
 	public static void main(String[] args) {
 
+		// two part variable "creation"
+		int y; // declaration
+		y = 10; // assignment 
+
+		//int z = 10; // both declaration and assignment in one statement
+		
 		//example how to create an array
 		int[] x; //declaration of variable
 		x = new int[5]; //allocation of memory

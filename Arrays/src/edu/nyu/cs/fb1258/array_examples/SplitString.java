@@ -19,7 +19,13 @@ public class SplitString {
 		
 		//loop through the array and print out each element
 		for (int i=0; i<words.length; i++) {
-			System.out.println(words[i]);
+			String word = words[i];
+			System.out.println(word);
+		}
+		
+		//shorthand way of doing the same thing
+		for (String word : words) {
+			System.out.println(word);
 		}
 		
 		

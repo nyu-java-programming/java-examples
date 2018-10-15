@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258;
+package edu.nyu.cs.fb1258.array_examples;
 
 /**
  * A review of what we know about arrays so far.

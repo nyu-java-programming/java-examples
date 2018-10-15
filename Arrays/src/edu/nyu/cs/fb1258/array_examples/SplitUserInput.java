@@ -28,6 +28,11 @@ public class SplitUserInput {
 			System.out.println(words[i]);
 		}
 		
+		// shorthand notation for the same loop
+		for (String word : words) {
+			System.out.println(word);
+		}
+		
 		//close scanner
 		in.close();
 	}

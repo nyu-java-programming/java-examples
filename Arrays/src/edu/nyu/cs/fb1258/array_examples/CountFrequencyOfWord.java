@@ -21,6 +21,10 @@ public class CountFrequencyOfWord {
 	public static int countFrequency(String needle, String  haystack) {
 		int counter = 0; //keeps track of how many needles we  find within the haystack
 		
+		//perform case-insensitive matches by converting everythign to lowercase
+		needle = needle.toLowerCase();
+		haystack = haystack.toLowerCase();
+		
 		//find the position of the first occurrence, if any, of  the needle within the haystack
 		int pos = haystack.indexOf(needle, 0);
 

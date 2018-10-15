@@ -21,6 +21,7 @@ public class ConvertArrayToString {
 		// use the wrapper class to do the same thing.
 		String wordsAsString = Arrays.toString(words);
 		System.out.println("The contents of the array are " + wordsAsString);
+
 	}
 
 }

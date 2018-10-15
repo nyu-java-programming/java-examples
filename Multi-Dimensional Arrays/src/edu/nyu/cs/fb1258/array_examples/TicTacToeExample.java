@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258;
+package edu.nyu.cs.fb1258.array_examples;
 
 import java.util.Scanner;
 
