@@ -16,9 +16,9 @@ public class ArraysRecap {
 	}
 	
 	public static void arraysRecap() {
-		int[] x;
-		x = new int[2];
-		x[0] = 1;
+		int[] x; // declaration
+		x = new int[2]; // allocation
+		x[0] = 1; // population
 		x[1] = 2462;
 		//...
 		
@@ -31,10 +31,11 @@ public class ArraysRecap {
 	}
 	public static void triangleArrayExample() {
 		
+		// two-dimensional "triangle" array
 		int[][] x = {
-				{31, 	252, 	6},
-				{41245, 5},
-				{525}
+				{5, 3, 99},
+				{66, 4},
+				{7}
 		};
 	}
 	
