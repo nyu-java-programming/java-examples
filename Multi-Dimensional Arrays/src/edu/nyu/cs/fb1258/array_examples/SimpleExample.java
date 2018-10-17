@@ -6,7 +6,7 @@ public class SimpleExample {
 		
 		// declaring, allocation, populating a 2-dimensional array
 		String[][] x = {
-				// a triangular array! which is an example of a ragged array
+				// a 'triangular array'! triangle arrays are one type of 'ragged array' - arrays with different lengthed sub-arrays
 				{"semantic", "nonsense", "befuddle", "yuckers"},
 				{"pedagogic", "drivvle", "puddle"},
 				{"didactic", "diaspora"},

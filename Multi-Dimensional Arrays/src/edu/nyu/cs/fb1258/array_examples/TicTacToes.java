@@ -64,7 +64,7 @@ public class TicTacToes {
 			}
 			
 			// switch players before next iteration
-            currentPlayer = (currentPlayer == X) ? O :  X;
+            currentPlayer = (currentPlayer == X) ? O : X;
 			
 		}
 
