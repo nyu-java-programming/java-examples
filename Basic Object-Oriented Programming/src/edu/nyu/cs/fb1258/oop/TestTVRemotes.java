@@ -6,7 +6,7 @@ package edu.nyu.cs.fb1258.oop;
  * @version 0.0001
  *
  */
-public class TestTVRemote {
+public class TestTVRemotes {
 
 	public static void main(String[] args) {
 		
