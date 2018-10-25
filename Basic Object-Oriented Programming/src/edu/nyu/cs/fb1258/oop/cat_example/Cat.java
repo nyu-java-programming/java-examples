@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.oop;
+package edu.nyu.cs.fb1258.oop.cat_example;
 
 /**
  * A template from which to make cats

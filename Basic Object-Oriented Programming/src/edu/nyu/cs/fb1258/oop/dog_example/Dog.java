@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.oop;
+package edu.nyu.cs.fb1258.oop.dog_example;
 
 /**
  * Definition of the Dog class.  Models a real dog in code.
@@ -14,12 +14,15 @@ public class Dog {
 	public boolean hasTail = true; //by default, our Dogs have tails
 	private String name;
 	public int age = 0; //by default, our Dogs are pups
-	public int gender;
+	public Sex sex; // the sex of this Dog
 	
-	//define the available genders for any given dog
-	//static properties belong to the class, not to any specific object
-	public static final int MALE = 0;
-	public static final int FEMALE = 1;
+	// define the available sexes for any given dog
+	// these are defined as an enum of related constants
+	// static properties belong to the class, not to any specific object
+	public static enum Sex {
+		MALE,
+		FEMALE
+	}
 	
 	/**
 	 * Getter method for the name property
@@ -56,12 +59,12 @@ public class Dog {
 
 	/**
 	 * Setter method for the gender property of any given Dog object.  Allows  gender to be set to either 0 or 1, which are represented in this class as  two static constants called MALE and FEMALE.
-	 * @param gender
+	 * @param sex The biological sex to assign to this dog
 	 */
-	public void giveGender(int gender) {
+	public void giveSex(Sex sex) {
 		//validate to make sure the gender is one of our accepted genders
-		if (gender == Dog.MALE || gender == Dog.FEMALE) {
-			this.gender = gender;
+		if (sex == Sex.MALE || sex == Sex.FEMALE) {
+			this.sex = sex;
 		}
 	}
 	
@@ -72,11 +75,11 @@ public class Dog {
 	public boolean fetch() {
 		double rand = Math.random();
 		if (rand > 0.5) {
-			System.out.println(this.name + " fetched the stick");
+			System.out.printf("%s fetched the stick.\n", this.name);
 			return true;
 		}
 		else {
-			System.out.println(this.name + " conscientiously objected to your  command to fetch the stick");
+			System.out.printf("%s conscientiously objected to your command to fetch the stick\n", this.name);
 			return false;
 		}
 	}
@@ -99,22 +102,22 @@ public class Dog {
 		if (age >= 0) {
 			this.age = age;			
 		}
-		System.out.println("You created new dog with the name " + this.name + "  and age " + this.age);
+		System.out.printf("You created new dog with the name %s and age %d.\n", this.name, this.age);
 	}
 	
 	/**
 	 * Constructor that sets a dog's name, age, gender, and hasTail properties.
 	 * @param name The name to give the Dog
 	 * @param age The age to give the Dog
-	 * @param gender The gender to give the Dog: either Dog.MALE or Dog.FEMALE
+	 * @param sex The biological sex to assign to the Dog: either Dog.Sex.MALE or Dog.Sex.FEMALE
 	 * @param hasTail Boolean value representing whether this dog has a tail or  not
 	 */
-	public Dog(String name, int age, int gender, boolean hasTail) {
+	public Dog(String name, int age, Sex sex, boolean hasTail) {
 		this.name = name;
 		this.age = age;
-		this.gender = gender;
+		this.sex = sex;
 		this.hasTail = hasTail;
-		System.out.println("You created new dog with the name " + this.name + ",  age " + this.age + ", gender " + this.gender + " and has a tail is " +  this.hasTail);
+		System.out.printf("You created new dog with the name %s, age %d, sex %s, and has tail = %b.\n", this.name, this.age, this.sex, this.hasTail);
 	}
 	
 }

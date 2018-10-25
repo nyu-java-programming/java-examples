@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.oop;
+package edu.nyu.cs.fb1258.oop.zoo_example;
 
 /**
  * A wrapper around a main method used to test the Zoo class.

@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.oop;
+package edu.nyu.cs.fb1258.oop.zoo_example;
 
 /**
 * A simple representation of a zoo
@@ -9,53 +9,95 @@ package edu.nyu.cs.fb1258.oop;
 public class Zoo {
 
 	//properties of a zoo
+	
+	/**
+	 * The number of people employed by the zoo.
+	 */
 	private int numberOfEmployees;
 	
-	//the hours of operation in 24 hours notation
+	/**
+	 * The hours of operation in 24 hours notation
+	 */
 	private int[][] hours;
 
-	//price in dollars
+	/**
+	 * Price of admission, in dollars
+	 */
 	private double priceOfAdmission;
 	
-	//all animals that exist in the zoo
+	/**
+	 * An array of all the animals that exist in the zoo
+	 */
 	private String[] animals;
 	
-	//the name of the zoo
+	/**
+	 * The name of the zoo
+	 */
 	private String name;
 	
-	//how much money the zoo has each year
+	/**
+	 * How much money the zoo has in its budget each year
+	 */
 	private int operatingBudget;
 
-	//the fraction of the budget that is reserved for employees pension plans
+	/**
+	 * The fraction of the budget that is reserved for employees pension plans
+	 */
 	private double fractionOfBudgetGoingToPensions;
 	
-	//the dollar amount going into pensions
+	/**
+	 * The dollar amount going into pensions
+	 */
 	private double dollarsForPensions;
 
-	//address of the zoo
+	/**
+	 * The address of the zoo
+	 */
 	private Address address;
 	
-	//current status of the zoo
+	/**
+	 * Current status of the zoo, open or closed
+	 */
 	private boolean isOpen = false;
 	
 	//getter and setter methods:
 	
+	/**
+	 * Classic 'getter' method for the hours property
+	 * @return The hours of operation of the zoo
+	 */
 	public int[][] getHours() {
 		return hours;
 	}
 
+	/**
+	 * Classic 'setter' method for the hours property
+	 * @param hours the hours of operation of the zoo, as a two-dimensional int array
+	 */
 	public void setHours(int[][] hours) {
 		this.hours = hours;
 	}
 
+	/**
+	 * Classic 'getter' method for the priceOfAdmission property
+	 * @return The price of admission to the zoo
+	 */
 	public double getPriceOfAdmission() {
 		return priceOfAdmission;
 	}
 
+	/**
+	 * Classic 'setter' method for the priceOfAdmission property
+	 * @param priceOfAdmission the price of admission to the zoo
+	 */
 	public void setPriceOfAdmission(double priceOfAdmission) {
 		this.priceOfAdmission = priceOfAdmission;
 	}
 
+	/**
+	 * Classic 'getter' method for the animals property
+	 * @return The array of animals in the zoo
+	 */
 	public String[] getAnimals() {
 		return animals;
 	}
@@ -64,6 +106,10 @@ public class Zoo {
 		this.animals = animals;
 	}
 
+	/**
+	 * Classic 'getter' method for the operatingBudget property
+	 * @return The operating budget of the zoo
+	 */
 	public int getOperatingBudget() {
 		return operatingBudget;
 	}
@@ -73,7 +119,7 @@ public class Zoo {
 	}
 	
 	public double getFractionOfBudgetGoingToPensions() {
-		return fractionOfBudgetGoingToPensions;
+		return this.fractionOfBudgetGoingToPensions;
 	}
 
 	public void setFractionOfBudgetGoingToPensions(double fractionOfBudgetGoingToPensions) {
@@ -81,7 +127,7 @@ public class Zoo {
 	}
 
 	public double getDollarsForPensions() {
-		return dollarsForPensions;
+		return this.dollarsForPensions;
 	}
 
 	public void setDollarsForPensions(double dollarsForPensions) {
@@ -89,7 +135,7 @@ public class Zoo {
 	}
 
 	public int getNumberOfEmployees() {
-		return numberOfEmployees;
+		return this.numberOfEmployees;
 	}
 
 	public void setNumberOfEmployees(int numberOfEmployees) {

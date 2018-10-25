@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.oop;
+package edu.nyu.cs.fb1258.oop.rocket_example;
 
 /**
  * A model of a rocket

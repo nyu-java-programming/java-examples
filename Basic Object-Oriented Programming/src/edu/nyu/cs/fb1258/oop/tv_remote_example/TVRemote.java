@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.oop;
+package edu.nyu.cs.fb1258.oop.tv_remote_example;
 
 /**
  * Model of a television remote control
