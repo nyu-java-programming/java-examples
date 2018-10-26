@@ -47,6 +47,9 @@ public class MakeSomeZoos {
 		//set the zoo's operating budget
 		bronxZoo.setOperatingBudget(15000000);
 		
+		// set the percentage of the operating budget that is saved for pensions to 20%
+		bronxZoo.setFractionOfBudgetGoingToPensions(0.2);
+		
 		//make an address object for the zoo
 		Address address = new Address();
 		address.setCity("New York");
@@ -58,7 +61,12 @@ public class MakeSomeZoos {
 		bronxZoo.setAddress(address);
 		
 		//output some information about this zoo
-		System.out.println("The " + bronxZoo.getName() + ", located at " + bronxZoo.getAddress().getStreet1() + " in " + bronxZoo.getAddress().getCity() + " has an operating budget of " + bronxZoo.getOperatingBudget() + " and " + bronxZoo.getNumberOfEmployees() + " employees");
+		System.out.printf("The %s, located at %s in %s has an operating budget of %d and %d employees.\n", 
+				bronxZoo.getName(), 
+				bronxZoo.getAddress().getStreet1(), 
+				bronxZoo.getAddress().getCity(), 
+				bronxZoo.getOperatingBudget(), 
+				bronxZoo.getNumberOfEmployees());
 
 	}
 

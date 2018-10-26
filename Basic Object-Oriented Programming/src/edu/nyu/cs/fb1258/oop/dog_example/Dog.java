@@ -9,16 +9,74 @@ package edu.nyu.cs.fb1258.oop.dog_example;
  */
 public class Dog {
 
+	/**
+	 * No-args constructor.  All Dog properties remain with their default  values, if any.
+	 * 
+	 */
+	public Dog() {
+		System.out.println("You created a new generic dog");
+	}
+	
+	/**
+	 * Constructor that sets the dog's name and age
+	 * @param name The name to give it
+	 * @param age The age to give it
+	 */
+	public Dog(String name, int age) {
+		this.name = name;
+		if (age >= 0) {
+			this.age = age;			
+		}
+		System.out.printf("You created new dog with the name %s and age %d.\n", this.name, this.age);
+	}
+	
+	/**
+	 * Constructor that sets a dog's name, age, gender, and hasTail properties.
+	 * @param name The name to give the Dog
+	 * @param age The age to give the Dog
+	 * @param sex The biological sex to assign to the Dog: either Dog.Sex.MALE or Dog.Sex.FEMALE
+	 * @param hasTail Boolean value representing whether this dog has a tail or  not
+	 */
+	public Dog(String name, int age, Sex sex, boolean hasTail) {
+		this.name = name;
+		this.age = age;
+		this.sex = sex;
+		this.hasTail = hasTail;
+		System.out.printf("You created new dog with the name %s, age %d, sex %s, and has tail = %b.\n", this.name, this.age, this.sex, this.hasTail);
+	}
+	
 	//properties (a.k.a. data fields) of any dog object
+	
+	/**
+	 * The type of fur this dog has
+	 */
 	public String furType;
+	
+	/**
+	 * Whether this dog has a tail
+	 */
 	public boolean hasTail = true; //by default, our Dogs have tails
+	
+	/**
+	 * The name of this dog, if any
+	 */
 	private String name;
+	
+	/**
+	 * The age of this dog
+	 */
 	public int age = 0; //by default, our Dogs are pups
+	
+	/**
+	 * The biological sex of this dog.
+	 */
 	public Sex sex; // the sex of this Dog
 	
-	// define the available sexes for any given dog
-	// these are defined as an enum of related constants
-	// static properties belong to the class, not to any specific object
+	/**
+	 * The available sexes for any given dog
+	 * these are defined as an enum of related constants
+	 * static properties belong to the class, not to any specific object
+	 */
 	public static enum Sex {
 		MALE,
 		FEMALE
@@ -73,51 +131,19 @@ public class Dog {
 	 * @return randomly returns either true or false, indicating whether  fetching was successful
 	 */
 	public boolean fetch() {
+		// generate a random number between 0 and 1, not inclusive of 1
 		double rand = Math.random();
+		// randomly fetch or not... dogs don't always follow instructions
 		if (rand > 0.5) {
 			System.out.printf("%s fetched the stick.\n", this.name);
 			return true;
 		}
 		else {
-			System.out.printf("%s conscientiously objected to your command to fetch the stick\n", this.name);
+			System.out.printf("%s conscientiously objected to your command to fetch the stick.\n", this.name);
 			return false;
 		}
 	}
 	
-	/**
-	 * No-args constructor.  All Dog properties remain with their default  values, if any.
-	 * 
-	 */
-	public Dog() {
-		System.out.println("You created a new generic dog");
-	}
-	
-	/**
-	 * Constructor that sets the dog's name and age
-	 * @param name The name to give it
-	 * @param age The age to give it
-	 */
-	public Dog(String name, int age) {
-		this.name = name;
-		if (age >= 0) {
-			this.age = age;			
-		}
-		System.out.printf("You created new dog with the name %s and age %d.\n", this.name, this.age);
-	}
-	
-	/**
-	 * Constructor that sets a dog's name, age, gender, and hasTail properties.
-	 * @param name The name to give the Dog
-	 * @param age The age to give the Dog
-	 * @param sex The biological sex to assign to the Dog: either Dog.Sex.MALE or Dog.Sex.FEMALE
-	 * @param hasTail Boolean value representing whether this dog has a tail or  not
-	 */
-	public Dog(String name, int age, Sex sex, boolean hasTail) {
-		this.name = name;
-		this.age = age;
-		this.sex = sex;
-		this.hasTail = hasTail;
-		System.out.printf("You created new dog with the name %s, age %d, sex %s, and has tail = %b.\n", this.name, this.age, this.sex, this.hasTail);
-	}
+
 	
 }

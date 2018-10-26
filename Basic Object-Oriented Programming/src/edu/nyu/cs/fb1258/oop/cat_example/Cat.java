@@ -1,12 +1,66 @@
 package edu.nyu.cs.fb1258.oop.cat_example;
 
 /**
- * A template from which to make cats
+ * A template from which to make Cat objects
  * @author Foo Barstein
  * @version 1
  *
  */
 public class Cat {
+
+	// constructors - special methods with no return type that always have the name of the class
+	// these are automatically called when a new object of this type is instantiated
+	
+	/**
+	 * No args constructor, which sets the name and coat to two placeholder values.
+	 */
+	public Cat() {
+		// set any defaults of an anonymous Cat here
+		this.setName("Anonymous Cat"); // set this to a default value
+		this.setCoat("bland"); // set this to a default value
+		// age, sex, and isMeowable are already set to default values
+	}
+	
+	/**
+	 * "No args" constructor that accepts no arguments
+	 */
+	public Cat(String name) {
+		// set some default values for important properties
+		this.setName(name);
+		this.setCoat("bland"); // set this to a default value
+		// age, sex, and isMeowable are already set to default values
+	}
+	
+	/*
+	 * Constructor that accepts the Cat's name and age as arguments, and applies a default coat property.
+	 */
+	public Cat(String name, int age) {
+		this.setName(name);
+		this.setAge(age);
+		this.setCoat("bland"); // set this to a default value
+		// sex and isMeowable are already set to default values
+	}
+	
+	/*
+	 * Constructor that accepts the Cat's name, age, and coat as arguments
+	 */
+	public Cat(String name, int age, String coat) {
+		this.setName(name);
+		this.setAge(age);
+		this.setCoat(coat);
+		// sex and isMeowable are already set to default values
+	}
+	
+	/*
+	 * Constructor that accepts the Cat's name, age, coat, and sex as arguments
+	 */
+	public Cat(String name, int age, String coat, String sex) {
+		this.setName(name);
+		this.setAge(age);
+		this.setCoat(coat);
+		this.setSex(sex);
+		// isMeowable is already set to a default value
+	}
 	
 	// properties that each cat has
 	
@@ -93,59 +147,7 @@ public class Cat {
 		// for every utterance, we output the name of the cat, it's memory address (using the hashCode() method that all objects have), its coat, and age.
 		System.out.printf("%s (Cat @%s), a %s, %d year-old cat, says '%s'!\n", this.getName(), Integer.toHexString(this.hashCode()), this.getCoat(), this.getAge(), utterance);		
 	}
-	
-	// constructor - a special method with no return type and always has the name of the class
-	
-	/**
-	 * No args constructor, which sets the name and coat to two placeholder values.
-	 */
-	public Cat() {
-		// set any defaults of an anonymous Cat here
-		this.setName("Anonymous Cat"); // set this to a default value
-		this.setCoat("bland"); // set this to a default value
-		// age, sex, and isMeowable are already set to default values
-	}
-	
-	/**
-	 * "No args" constructor that accepts no arguments
-	 */
-	public Cat(String name) {
-		// set some default values for important properties
-		this.setName(name);
-		this.setCoat("bland"); // set this to a default value
-		// age, sex, and isMeowable are already set to default values
-	}
-	
-	/*
-	 * Constructor that accepts the Cat's name and age as arguments, and applies a default coat property.
-	 */
-	public Cat(String name, int age) {
-		this.setName(name);
-		this.setAge(age);
-		this.setCoat("bland"); // set this to a default value
-		// sex and isMeowable are already set to default values
-	}
-	
-	/*
-	 * Constructor that accepts the Cat's name, age, and coat as arguments
-	 */
-	public Cat(String name, int age, String coat) {
-		this.setName(name);
-		this.setAge(age);
-		this.setCoat(coat);
-		// sex and isMeowable are already set to default values
-	}
-	
-	/*
-	 * Constructor that accepts the Cat's name, age, coat, and sex as arguments
-	 */
-	public Cat(String name, int age, String coat, String sex) {
-		this.setName(name);
-		this.setAge(age);
-		this.setCoat(coat);
-		this.setSex(sex);
-		// isMeowable is already set to a default value
-	}
+
 	
 	// setter methods
 	
