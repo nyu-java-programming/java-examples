@@ -94,7 +94,7 @@ public class PoetryGenerator {
 		Random randy = new Random();
 		
 		// randomly pick a noun
-		String noun = nouns[randy.nextInt(nouns.length)]; // grab one of the nouns from the array
+		String noun = this.nouns[randy.nextInt(nouns.length)]; // grab one of the nouns from the array
 		
 		// capitalize the noun
 		char[] characters = noun.toCharArray(); // get the char array from this string
@@ -103,18 +103,18 @@ public class PoetryGenerator {
 		noun = new String(characters); // make a new string from this char array
 		
 		// append this noun to the poem
-		line.append(" " + noun);  // does not create a new object!
+		line.append(noun);  // does not create a new object!
 		
 		// randomly pick a adverb
-		String adverb = adverbs[randy.nextInt(adverbs.length)]; // grab one of the adverbs from the array
+		String adverb = this.adverbs[randy.nextInt(adverbs.length)]; // grab one of the adverbs from the array
 		line.append(" " + adverb); // append this adverb to the poem
 
 		// randomly pick a verb
-		String verb = verbs[randy.nextInt(verbs.length)]; // grab one of the verbs from the array
+		String verb = this.verbs[randy.nextInt(verbs.length)]; // grab one of the verbs from the array
 		line.append(" " + verb); // append this verb to the poem
 
 		// randomly pick a preposition
-		String preposition = prepositions[randy.nextInt(prepositions.length)]; // grab one of the prepositions from the array
+		String preposition = this.prepositions[randy.nextInt(prepositions.length)]; // grab one of the prepositions from the array
 		line.append(" " + preposition); // append this article to the poem
 
 		// randomly pick an article

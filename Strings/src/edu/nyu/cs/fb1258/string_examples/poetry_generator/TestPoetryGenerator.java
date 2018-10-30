@@ -13,7 +13,7 @@ public class TestPoetryGenerator {
 		PoetryGenerator g = new PoetryGenerator();
 
 		// get a ten-line poem.
-		String poem = g.getAPoem(10); 
+		String poem = g.getAPoem(2); 
 		System.out.println(poem);
 
 	}
