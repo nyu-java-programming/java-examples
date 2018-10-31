@@ -3,13 +3,13 @@ package edu.nyu.cs.fb1258.processing_examples;
 import processing.core.*;
 
 /**
- * Pops open an applet window that displays a circle that follows the user's mouse around and leaves a trail behind.
+ * Pops open an applet window that displays several circles that trace the user's mouse around and leave a trail behind.
  * To run this, you must have imported and added the Processing core.jar file to your build path.
  * @author Foo Barstein
  * @version 9
  *
  */
-public class CircleTrails extends PApplet {
+public class CircleTrailsMirrors extends PApplet {
 
 	//instance properties
 	
@@ -18,7 +18,7 @@ public class CircleTrails extends PApplet {
 	private final int w = 600;
 	
 	//instance variables to hold the diameter of the circle we will draw
-	private final int circleDiameter = 100;
+	private final int circleDiameter = 20;
 	
 	/**
 	 * This method is automatically called by Java when the program first starts.
@@ -26,7 +26,7 @@ public class CircleTrails extends PApplet {
 	 */
 	public static void main(String[] args) {
 		//must call PApplet's static main method, and supply the full package and class name of this class as an argument
-		PApplet.main("edu.nyu.cs.fb1258.processing_examples.CircleTrails");
+		PApplet.main("edu.nyu.cs.fb1258.processing_examples.CircleTrailsMirrors");
 	}
 	
 	/**
@@ -34,7 +34,7 @@ public class CircleTrails extends PApplet {
 	 */
 	public void settings() {
 		//set the site of the window in pixels to the value of these two instance properties
-		size(this.w, this.h); 
+		this.size(this.w, this.h); 
 	}
 	
 	/**
@@ -43,7 +43,7 @@ public class CircleTrails extends PApplet {
 	public void setup() {
 		
 		//fill the background with this color (specified in 8-bit Red, Green, Blue values)
-		background(255, 255, 255); //white
+		this.background(255, 255, 255); //white
 
 	}
 	
@@ -54,18 +54,28 @@ public class CircleTrails extends PApplet {
 
 		//generate pseudo-random R,G,B values
 		float r = 255 * (second() * 1.0f/60); //between 0 - 255 based on current number of seconds
-		float g = 100f; //hard-coded amount of green
-		float b = 92f; //hard-coded amount of blue
+		float g = 0f; //hard-coded amount of blue
+		float b = 255 - r; //between 255 - 0 based on current number of seconds
+		//System.out.printf("Setting fill color to %f, %f, %f\n", r, g, b); //debug
 		
 		//set the fill color to these pseudo-random values
 		this.fill(r, g, b);
 		
-		// set the stroke color (the border around the circle) to be black
-		this.stroke(0, 0, 0);
+		// set the stroke color (the border around the circle) to be white
+		this.stroke(255, 255, 255);
 		
 		//draw an ellipse at the current position of the mouse (notice the use of mouseX and mouseY properties inherited from PApplet)
-		ellipse(this.mouseX, this.mouseY, this.circleDiameter, this.circleDiameter);
-		
+		this.ellipse(this.mouseX, this.mouseY, this.circleDiameter, this.circleDiameter);
+
+		//draw an ellipse across from the mouse in the horizontal direction
+		this.ellipse(this.w - this.mouseX, this.mouseY, this.circleDiameter, this.circleDiameter);
+
+		//draw an ellipse across from the mouse in the vertical direction
+		this.ellipse(this.mouseX, this.h - this.mouseY, this.circleDiameter, this.circleDiameter);
+
+		//draw an ellipse across from the mouse in both the horizontal and vertical directions
+		this.ellipse(this.w - this.mouseX, this.h - this.mouseY, this.circleDiameter, this.circleDiameter);
+
 	}
 	
 	/**
@@ -73,7 +83,7 @@ public class CircleTrails extends PApplet {
 	 */
 	public void mouseClicked() {
 		//fill the window with this color (specified in 8-bit R,G,B values)
-		background(255, 255, 255); //white wash
+		this.background(255, 255, 255); //white wash
 	}
 
 }
