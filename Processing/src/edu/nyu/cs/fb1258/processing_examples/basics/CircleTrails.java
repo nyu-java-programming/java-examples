@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.processing_examples;
+package edu.nyu.cs.fb1258.processing_examples.basics;
 
 import processing.core.*;
 
@@ -34,7 +34,7 @@ public class CircleTrails extends PApplet {
 	 */
 	public void settings() {
 		//set the site of the window in pixels to the value of these two instance properties
-		size(this.w, this.h); 
+		this.size(this.w, this.h); 
 	}
 	
 	/**
@@ -43,7 +43,7 @@ public class CircleTrails extends PApplet {
 	public void setup() {
 		
 		//fill the background with this color (specified in 8-bit Red, Green, Blue values)
-		background(255, 255, 255); //white
+		this.background(255, 255, 255); //white
 
 	}
 	
@@ -64,7 +64,7 @@ public class CircleTrails extends PApplet {
 		this.stroke(0, 0, 0);
 		
 		//draw an ellipse at the current position of the mouse (notice the use of mouseX and mouseY properties inherited from PApplet)
-		ellipse(this.mouseX, this.mouseY, this.circleDiameter, this.circleDiameter);
+		this.ellipse(this.mouseX, this.mouseY, this.circleDiameter, this.circleDiameter);
 		
 	}
 	
@@ -73,7 +73,7 @@ public class CircleTrails extends PApplet {
 	 */
 	public void mouseClicked() {
 		//fill the window with this color (specified in 8-bit R,G,B values)
-		background(255, 255, 255); //white wash
+		this.background(255, 255, 255); //white wash
 	}
 
 }

@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.processing_examples;
+package edu.nyu.cs.fb1258.processing_examples.basics;
 
 import processing.core.*;
 

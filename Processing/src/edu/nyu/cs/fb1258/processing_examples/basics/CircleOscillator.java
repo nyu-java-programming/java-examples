@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.processing_examples;
+package edu.nyu.cs.fb1258.processing_examples.basics;
 
 import processing.core.*;
 
@@ -37,14 +37,14 @@ public class CircleOscillator extends PApplet {
 	 */
 	public void settings() {
 		//set the site of the window in pixels to the values of the instance properties w and h
-		this.size(this.w, this.h); 
-
+		this.size(this.w, this.h); 		
 	}
 	
 	/**
 	 * Method to compose the first 'frame' of the app
 	 */
 	public void setup() {
+
 		//fill the background with this color (specified in 8-bit R, G, B values)
 		this.background(255, 255, 255); //white
 
@@ -62,15 +62,15 @@ public class CircleOscillator extends PApplet {
 		this.background(255, 255, 255); //white
 
 		//generate pseudo-random R,G,B values 
-		float r = 255 * (second() * 1.0f/60); //int between 0 - 255 based on current number of seconds
-		float g = 100f; //hard-coded amount of green
-		float b = 92f; //hard-coded amount of blue
+		float r = 255 * (PApplet.second() * 1.0F/60); //int between 0 - 255 based on current number of seconds
+		float g = 100F; //hard-coded amount of green
+		float b = 92F; //hard-coded amount of blue
 		
 		//set the fill color to these random values
 		this.fill(r, g, b);
 		
 		//draw an ellipse of width and height 100, and position its center at the current value of the x and y instance properties
-		this.ellipse(this.x, this.y, 100, 100);
+		this.ellipse(this.x, this.y, 200, 100);
 		
 		//update the x position for next time we draw it
 		this.moveX();

@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.processing_examples;
+package edu.nyu.cs.fb1258.processing_examples.basics;
 
 import processing.core.*;
 
@@ -52,8 +52,8 @@ public class Melange extends PApplet {
 		this.size(this.w, this.h);
 		
 		//get a PImage object and store it in the instance property
-		puppy = this.loadImage("src/puppy.jpg");
-		button = this.loadImage("src/button.png");
+		this.puppy = this.loadImage("src/puppy.jpg");
+		this.button = this.loadImage("src/button.png");
 	}
 	
 	/**
@@ -66,7 +66,7 @@ public class Melange extends PApplet {
 		this.background(240, 224, 7); //in R,G,B 8-bit values
 		
 		//draw the puppy at its original starting position
-		this.image(this.puppy, width/2, height/2);
+		this.image(this.puppy, this.w/2, this.h/2);
 		
 	}
 	
@@ -89,7 +89,7 @@ public class Melange extends PApplet {
 		this.rect(this.rectX, this.rectY, this.rectWidth, this.rectHeight);
 		
 		//draw a poor puppy centered wherever the cursor is pointing
-		this.image(puppy, this.mouseX - 75, this.mouseY - 75);
+		this.image(this.puppy, this.mouseX - 75, this.mouseY - 75);
 		
 		//draw the button at the top left of the screen
 		this.image(button, 0, 0);
@@ -128,8 +128,8 @@ public class Melange extends PApplet {
 		this.textSize(100);
 		
 		//generate a random x and y coordinate where to put the text
-		int x = (int) (Math.random() * this.width);
-		int y = (int) (Math.random() * this.height);
+		int x = (int) (Math.random() * this.w);
+		int y = (int) (Math.random() * this.h);
 		
 		//debugging...
 		//System.out.println(x + ":" + y);
