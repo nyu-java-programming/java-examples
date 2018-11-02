@@ -41,7 +41,7 @@ public class Melange extends PApplet {
 	public static void main(String[] args) {
 		//call PApplet's main method and supply your class name
 		//note that any package name must be prefixed
-		PApplet.main("edu.nyu.cs.fb1258.processing_examples.Melange");
+		PApplet.main("edu.nyu.cs.fb1258.processing_examples.basics.Melange");
 	}
 	
 	/**

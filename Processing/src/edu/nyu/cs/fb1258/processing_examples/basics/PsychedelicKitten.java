@@ -38,7 +38,7 @@ public class PsychedelicKitten extends PApplet {
 	 */
 	public static void main(String[] args) {
 		//run PApplet's static main method, and give it our class's full name, including package
-		PApplet.main("edu.nyu.cs.fb1258.processing_examples.PsychedelicKitten");
+		PApplet.main("edu.nyu.cs.fb1258.processing_examples.basics.PsychedelicKitten");
 	}
 	
 	/**

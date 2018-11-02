@@ -26,7 +26,7 @@ public class CircleTrails extends PApplet {
 	 */
 	public static void main(String[] args) {
 		//must call PApplet's static main method, and supply the full package and class name of this class as an argument
-		PApplet.main("edu.nyu.cs.fb1258.processing_examples.CircleTrails");
+		PApplet.main("edu.nyu.cs.fb1258.processing_examples.basics.CircleTrails");
 	}
 	
 	/**
