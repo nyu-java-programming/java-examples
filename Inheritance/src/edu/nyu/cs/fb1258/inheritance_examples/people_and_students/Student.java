@@ -10,7 +10,42 @@ import java.util.Random;
  * @version 0.1
  *
  */
-public class NYUStudent extends Person {
+public class Student extends Person {
+	// constructors
+
+	// the no-args constructor has been inherited... so no need to redefine if you don't want to changer it
+	public Student() {
+		// call the parent class's no-args constructor to set up the properties all Persons have
+		super(); 
+		
+		// now do things that are unique to Student objects...
+		
+		// generate an N Number for this student
+		this.nNumber = Student.generateIDNumber();
+
+		// get this student's Net Id
+		this.netId = this.generateNetId(this.getName());
+	}
+	
+	/**
+	 * A constructor that creates a student with some basic Person information
+	 * @param name The name of the Student
+	 * @param age The age of the Student
+	 * @param sex The sex of the Student
+	 */
+	public Student(String name, int age, char sex) {
+		// call the parent class's constructor with arguments to set up the properties all Persons have
+		super(name, age, sex);
+		
+		// now do things that are unique to Student objects...
+
+		// assign an N number to this student
+		this.nNumber = Student.generateIDNumber();
+		
+		// get this student's Net Id
+		this.netId = this.generateNetId(this.getName());
+	}
+	
 	
 	// properties that are shared among all students
 	
@@ -27,6 +62,11 @@ public class NYUStudent extends Person {
 	
 	
 	// some properties that students have in addition to the basic Person stuff
+	
+	/**
+	 * The current course schedule for this student
+	 */
+	private ClassSchedule currentClassSchedule;
 	
 	/**
 	 * The NYU ID number of this student... e.g. "N12345678";
@@ -47,35 +87,6 @@ public class NYUStudent extends Person {
 	 * The year the student is in
 	 */
 	private String year; // e.g. "Freshman"
-	
-
-	// the no-args constructor has been inherited... so no need to redefine if you don't want to changer it
-	public NYUStudent() {
-		super(); // call the parent class's no-args constructor
-		
-		// generate an N Number for this student
-		this.nNumber = NYUStudent.generateIDNumber();
-
-		// get this student's Net Id
-		this.netId = this.generateNetId(this.getName());
-	}
-	
-	/**
-	 * A constructor that creates a student with some basic Person information
-	 * @param name The name of the Student
-	 * @param age The age of the Student
-	 * @param sex The sex of the Student
-	 */
-	public NYUStudent(String name, int age, char sex) {
-		// call the super-class's constructor with these three arguments
-		super(name, age, sex);
-
-		// assign an N number to this student
-		this.nNumber = NYUStudent.generateIDNumber();
-		
-		// get this student's Net Id
-		this.netId = this.generateNetId(this.getName());
-	}
 
 	/**
 	 * NYU ID numbers are the letter 'N', followed by 8 digits.  We simply increment a static counter and use that as the ID for each new student.
@@ -84,10 +95,10 @@ public class NYUStudent extends Person {
 	 */
 	public static String generateIDNumber() {
 		// increment the student counter
-		NYUStudent.numStudents++;
+		Student.numStudents++;
 
 		// figure out what number this student is
-		int studentNum = NYUStudent.numStudents;
+		int studentNum = Student.numStudents;
 		
 		// determine how many characters are in this number
 		int numCharsInStudentNumber = Integer.toString(studentNum).length();
@@ -121,7 +132,7 @@ public class NYUStudent extends Person {
 		String initials = Character.toString(firstInitial) + Character.toString(lastInitial); // convert the two chars to Strings and concatenate to the Net Id
 		
 		// determine how many existing students have these same initials
-		Integer count = (Integer) NYUStudent.initialsCounters.get(initials);
+		Integer count = (Integer) Student.initialsCounters.get(initials);
 		if (count == null) {
 			// no existing students have these same initials
 			count = 0;
@@ -129,7 +140,7 @@ public class NYUStudent extends Person {
 		
 		// add one to this counter, since we now have a new student with these initials
 		count++;
-		NYUStudent.initialsCounters.put(initials, count); // store this update in the hash map
+		Student.initialsCounters.put(initials, count); // store this update in the hash map
 		
 		//fill in 0s so that the number consumes 8 characters
 		//using char array to do this, because it's easy
@@ -143,6 +154,33 @@ public class NYUStudent extends Person {
 		String netId = initials.toLowerCase() + zeros + count;
 
 		return netId;
+	}
+	
+	public int getNumberOfCredits() {
+		// loop through all the courses this student is taking and calculate sum of credits
+		int sum = 0;
+		for (Course cursely : this.getCurrentClassSchedule().getCourses()) {
+			sum += cursely.getNumCredits();
+		}
+		
+		return sum;
+			
+	}
+	// generic getters and setters
+	// note that we are not doing any validation in the setters, which really should be done
+
+	/**
+	 * @return the currentClassSchedule
+	 */
+	public ClassSchedule getCurrentClassSchedule() {
+		return currentClassSchedule;
+	}
+
+	/**
+	 * @param currentClassSchedule the currentClassSchedule to set
+	 */
+	public void setCurrentClassSchedule(ClassSchedule currentClassSchedule) {
+		this.currentClassSchedule = currentClassSchedule;
 	}
 
 	/**
