@@ -62,6 +62,7 @@ public class Person {
 	public void setName(String name) {
 		// validate the name
 		if (name.length() > 0) {
+			// set the name!
 			this.name = name;
 		}
 	}

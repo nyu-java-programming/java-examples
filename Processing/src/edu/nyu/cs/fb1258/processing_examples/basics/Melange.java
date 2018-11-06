@@ -49,11 +49,7 @@ public class Melange extends PApplet {
 	 */
 	public void settings() {
 		//set the width and height of the app window
-		this.size(this.w, this.h);
-		
-		//get a PImage object and store it in the instance property
-		this.puppy = this.loadImage("src/puppy.jpg");
-		this.button = this.loadImage("src/button.png");
+		this.size(this.w, this.h);		
 	}
 	
 	/**
@@ -62,6 +58,10 @@ public class Melange extends PApplet {
 	public void setup() {
 		//using colors from colourlovers.com: http://www.colourlovers.com/palette/4535252/unfinished_2nd
 		
+		//get a PImage object and store it in the instance property
+		this.puppy = this.loadImage("src/puppy.jpg");
+		this.button = this.loadImage("src/button.png");
+
 		//fill the window with a solid color
 		this.background(240, 224, 7); //in R,G,B 8-bit values
 		
