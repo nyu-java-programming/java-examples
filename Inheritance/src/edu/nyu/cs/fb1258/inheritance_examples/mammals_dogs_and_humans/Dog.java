@@ -7,20 +7,8 @@ package edu.nyu.cs.fb1258.inheritance_examples.mammals_dogs_and_humans;
  *
  */
 public class Dog extends Mammal {
-	/**
-	 * the name of this Dog object
-	 */
-	private String name;
 
-	/**
-	 * Setter for the name property
-	 * @param n the new name of this Dog 
-	 */
-	public void setName(String n) {
-		if (n.length() > 0) {
-			this.name = n;			
-		}
-	}
+	// constructors
 	
 	/**
 	 * no-args constructor simply calls the Mammal class's no-args constructor
@@ -40,6 +28,23 @@ public class Dog extends Mammal {
 		this.setName(n);
 	}
 	
+	
+	/**
+	 * the name of this Dog object
+	 */
+	private String name;
+
+	/**
+	 * Setter for the name property
+	 * @param n the new name of this Dog 
+	 */
+	public void setName(String n) {
+		if (n.length() > 0) {
+			this.name = n;			
+		}
+	}
+	
+
 	/**
 	 * override the default Mammal sleep method with a Dog-specific sleep style.
 	 */
@@ -47,7 +52,7 @@ public class Dog extends Mammal {
 		super.sleep(); //calling the Mammal's version of the sleep method first
 		
 		//then doing some additional Dog type sleeping...
-		System.out.println(this.name + " is sleeping ...woof whimper whoof.");
+		System.out.printf("%s is sleeping ...woof whimper whoof.\n", this.name);
 	}
 	
 	/**

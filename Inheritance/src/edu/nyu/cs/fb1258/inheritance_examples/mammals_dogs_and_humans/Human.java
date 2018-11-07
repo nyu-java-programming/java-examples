@@ -7,16 +7,9 @@ package edu.nyu.cs.fb1258.inheritance_examples.mammals_dogs_and_humans;
  *
  */
 public class Human extends Mammal {
-	/**
-	 * the first name of this Human object
-	 */
-	private String firstName;
 	
-	/**
-	 * the last name of this Human object
-	 */
-	private String lastName;
-
+	// constructors
+	
 	/**
 	 * no-args constructor simply calls the Mammal class's default constructor
 	 */
@@ -71,20 +64,31 @@ public class Human extends Mammal {
 	}
 
 	/**
+	 * the first name of this Human object
+	 */
+	private String firstName;
+	
+	/**
+	 * the last name of this Human object
+	 */
+	private String lastName;
+
+
+	/**
 	 * override the default Mammal sleep method with a Human-specific sleep style.
 	 */
 	public void sleep() {
 		super.sleep(); //calling the Mammal's version of the sleep method first
 
 		//then doing some additional Human type sleeping...
-		System.out.println(this.firstName + " is sleeping ...snore snore snore.");
+		System.out.printf("%s is sleeping ...snore snore snore.\n", this.firstName);
 	}
 	
 	/**
 	 * A specifically human method that other Mammals don't have
 	 */
 	public void speak() {
-		System.out.println(this.firstName + " is saying something interesting...");
+		System.out.printf("%s is saying something interesting...\n", this.firstName);
 	}
 
 }

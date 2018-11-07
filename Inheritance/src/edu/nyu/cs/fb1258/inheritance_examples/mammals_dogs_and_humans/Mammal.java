@@ -7,6 +7,29 @@ package edu.nyu.cs.fb1258.inheritance_examples.mammals_dogs_and_humans;
  *
  */
 public class Mammal {
+	
+	// constructors
+	
+	/**
+	 * no-args constructor randomly assigns the Mammal object's sex
+	 */
+	public Mammal() {
+		//not sure what to do here
+		//this.sex = Mammal.NEUTRAL;
+		double rand = Math.random() * 2;
+		int g = (int) rand;
+		this.sex = g;		
+	}
+	
+	/**
+	 * overloaded constructor to explicitly assign the Mammal object's sex
+	 * @param g integer representing this Mammal's sex: 0 represents male, 1 represents female
+	 */
+	public Mammal(int g) {
+		this.sex = g;
+	}	
+	
+	
 	/**
 	 * constant class attribute representing male sex.
 	 * This makes it easy to refer to male or female sex by intuitive names, rather than integers
@@ -68,26 +91,7 @@ public class Mammal {
 		System.out.println("mammal lactating a lot...");
 	}
 
-	/**
-	 * no-args constructor randomly assigns the Mammal object's sex
-	 */
-	public Mammal() {
-		//not sure what to do here
-		//this.sex = Mammal.NEUTRAL;
-		double rand = Math.random() * 2;
-		int g = (int) rand;
-		this.sex = g;		
-	}
-	
-	/**
-	 * overloaded constructor to explicitly assign the Mammal object's sex
-	 * @param g integer representing this Mammal's sex: 0 represents male, 1 represents female
-	 */
-	public Mammal(int g) {
-		this.sex = g;
-	}	
-	
-	
+
 	//accessor methods
 	
 	/**

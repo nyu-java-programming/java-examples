@@ -16,16 +16,16 @@ public class TestMammals {
 
 		//create a mammal object
 		Mammal geoff = new Mammal(Mammal.MALE);
-		System.out.println("Geoff the mammal is " + geoff.getSex(true));
+		System.out.printf("Geoff the mammal is %s.\n", geoff.getSex(true));
 
 		//create a dog object
 		Dog lassy = new Dog("Lassy");
-		System.out.println("Lassy the Dog is " + lassy.getSex(true));
+		System.out.printf("Lassy the Dog is %s.\n", lassy.getSex(true));
 		lassy.sleep();
 
 		//create a dog object
 		Human rodrigo = new Human("Rodrigo", "Barstein", Mammal.MALE);
-		System.out.println("Rodrigo the Human is " + rodrigo.getSex(true));
+		System.out.printf("Rodrigo the Human is %s.\n", rodrigo.getSex(true));
 		rodrigo.sleep();
 		rodrigo.eat();
 		
