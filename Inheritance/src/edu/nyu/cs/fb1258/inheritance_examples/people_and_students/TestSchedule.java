@@ -18,7 +18,7 @@ public class TestSchedule {
 		int year = 2019;
 		
 		// create a few student whose schedules we will create
-		Student me = new Student(); // an pseudononymous student, of random sex, aged zero
+		Student me = new Student(); // an pseudonymous student, of random sex, aged zero
 		Student you = new Student("Rafaela Barros Cardoso", 57, 'F'); // instantiate using full args constructor
 		Student another = new Student("Jennifer Rong Do", 19, 'F'); // instantiate using full args constructor, store in a Person-typed variable!
 		

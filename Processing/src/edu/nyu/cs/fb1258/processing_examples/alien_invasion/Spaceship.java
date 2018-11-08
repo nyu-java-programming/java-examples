@@ -43,6 +43,7 @@ public class Spaceship {
 	 * Get the width of this spaceship, based on  the width of its image.
 	 */
 	public int getWidth() {
+		// the PImage object has a width property
 		return this.img.width;
 	}
 	
@@ -50,6 +51,7 @@ public class Spaceship {
 	 * Get the height of this spaceship, based  on the width of its image.
 	 */
 	public int getHeight() {
+		// the PImage object has a height property
 		return this.img.height;
 	}
 	
@@ -57,7 +59,8 @@ public class Spaceship {
 	 * Slide the spaceship further to the right  or left, depending upon the current  direction it's moving.
 	 */
 	public void move() {
-		int newX = this.x + this.speedX; // calculate move by whichever amount is  specified in speedX variable.
+		// calculate move by whichever amount is  specified in speedX variable.
+		int newX = this.x + this.speedX; 
 		
 		//check bounds
 		boolean outOfBoundsToTheLeft = newX < 0  + App.APP_MARGIN; //too far to the left?
@@ -87,7 +90,8 @@ public class Spaceship {
 	 * Draws this alien to the PApplet screen.   Each alien draws itself to the main app  screen in this way.
 	 */
 	public void draw() {
-		//draw the image using PApplet's image  method
+		// draw the image using PApplet's image method... 
+		// the reason we store a reference to the App object in this class's constructor is so that we can use it to draw this image to the screen here
 		this.app.image(this.img, this.x, this.y);
 	}
 

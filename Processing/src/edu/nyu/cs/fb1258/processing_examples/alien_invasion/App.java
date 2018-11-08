@@ -31,7 +31,7 @@ public class App extends PApplet {
 	private Spaceship spaceship;
 
 	//an array to hold our friendly aliens
-	private ArrayList<Alien> aliens = new  ArrayList<Alien>(); //will hold a bunch of  aliens
+	private ArrayList<Alien> aliens = new ArrayList<Alien>(); //will hold a bunch of  aliens
 
 	//an array list that will hold any bullets  that are currently on screen.
 	private ArrayList<Bullet> bullets = new  ArrayList<Bullet>();
