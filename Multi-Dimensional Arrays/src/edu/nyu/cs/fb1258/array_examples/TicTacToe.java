@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @version 22
  * 
  */
-public class TicTacToes {
+public class TicTacToe {
 	
 	// class variables that represent each state a given position on the board could be in
 	public final static char X = 'X';
