@@ -42,7 +42,7 @@ public class Revenge implements Servable {
 		}
 		else {
 			// the revenge is not cold, so do not serve it.
-			System.out.println("This revenge cannot be served.  Please make sure it is cold and try again.");
+			System.out.println("This revenge cannot be served.  Please make sure your revenge is cold and try serving again.");
 		}
 	}
 	
