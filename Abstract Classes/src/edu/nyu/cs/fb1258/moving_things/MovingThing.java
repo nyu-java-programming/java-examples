@@ -25,10 +25,39 @@ public abstract class MovingThing {
 	private int x = 0;
 	private int y = 0;
 	
-	// speed at which this object moves in the x and y directions
-	private int speedX = 10;
-	private int speedY =10;
+	// speed in the x and y coordinates
+	private int speedX = 5;
+	private int speedY = 5;
 	
+	/**
+	 * @return the speedX
+	 */
+	public int getSpeedX() {
+		return speedX;
+	}
+
+	/**
+	 * @param speedX the speedX to set
+	 */
+	public void setSpeedX(int speedX) {
+		this.speedX = speedX;
+	}
+
+	/**
+	 * @return the speedY
+	 */
+	public int getSpeedY() {
+		return speedY;
+	}
+
+	/**
+	 * @param speedY the speedY to set
+	 */
+	public void setSpeedY(int speedY) {
+		this.speedY = speedY;
+	}
+
+
 	/**
 	 * The App object, which inherits from PApplet and has lots of useful methods for animation
 	 */

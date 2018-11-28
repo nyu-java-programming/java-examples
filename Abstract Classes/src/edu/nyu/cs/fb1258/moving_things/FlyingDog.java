@@ -16,6 +16,13 @@ public class FlyingDog extends MovingThing {
 	 */
 	public FlyingDog(App app) {
 		super(app, "src/dog.jpg");
+		int newX = (int) (Math.random() * app.width);
+		this.setX(newX);
+		int newY = (int) (Math.random() * app.height);
+		this.setY(newY);
+		
+		int newSpeedX = (int) (Math.random() * 10);
+		this.setSpeedX(newSpeedX);
 	}
 	
 	/**
@@ -24,7 +31,7 @@ public class FlyingDog extends MovingThing {
 	@Override
 	public void move() {
 		// hard-coded change in x position
-		int dx = 2;
+		int dx = this.getSpeedX();
 		this.setX(this.getX() + dx);
 		
 		// bounds checking - wrap the dog around the screen if it goes too far to the right

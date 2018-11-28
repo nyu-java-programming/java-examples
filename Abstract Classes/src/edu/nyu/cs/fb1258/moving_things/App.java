@@ -1,5 +1,7 @@
 package edu.nyu.cs.fb1258.moving_things;
 
+import java.util.ArrayList;
+
 import processing.core.PApplet;
 
 /**
@@ -14,16 +16,9 @@ public class App extends PApplet {
 	private int w = 800;
 	private int h = 600;
 	
-	/**
-	 * The flying dog
-	 */
-	private FlyingDog fido;
-	
-	/**
-	 * The spaceship
-	 */
-	private Spaceship ship;
-	
+	// blank arraylist that will hold our moving things
+	private ArrayList<MovingThing> things = new ArrayList<MovingThing>();
+
 	public static void main(String[] args) {
 		PApplet.main("edu.nyu.cs.fb1258.moving_things.App");
 	}
@@ -41,30 +36,31 @@ public class App extends PApplet {
 	public void setup() {
 		this.background(255, 255, 255);
 		
-		//instantate the dog and spaceship and store them in instance variables
-		this.fido = new FlyingDog(this);
-		this.ship = new Spaceship(this);
+		//instantate several dogs and spaceships and store them in instance variables
+		for (int i=0; i<5; i++) {
+			
+			FlyingDog dog = new FlyingDog(this); // make a new dog
+			this.things.add(dog); // add to the array list
+			
+			Spaceship ship = new Spaceship(this); // make a new ship
+			this.things.add(ship); // add to the array list
+		}
 	}
 	
 	/**
 	 * Draw a single frame of the animation
 	 */
 	public void draw() {
+		
 		// wipe out the background
 		this.background(255, 255, 255);
 
-		// draw the dog
-		fido.draw();
-		
-		// draw the spaceship
-		ship.draw();
-		
-		// update the dog's position
-		fido.move();
-		
-		// update the spaceship's position
-		ship.move();
-		
+		// loop through all the things
+		for (MovingThing thing : things) {
+			thing.draw();
+			thing.move();
+		}
+
 	}
 
 }
