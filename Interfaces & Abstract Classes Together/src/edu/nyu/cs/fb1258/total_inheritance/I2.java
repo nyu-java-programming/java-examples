@@ -10,9 +10,9 @@ public interface I2 extends I1 {
 
 	/*
 	 * This interface inherits the following from I1:
-	 *     pubic abstract void method1()
-	 *     pubic abstract void method2()
-	 *     pubic default void method3()
+	 *     public abstract void method1()
+	 *     public abstract void method2()
+	 *     public default void method3()
 	 */
 	
 	/**
