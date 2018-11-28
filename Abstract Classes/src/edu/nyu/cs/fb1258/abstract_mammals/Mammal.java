@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258;
+package edu.nyu.cs.fb1258.abstract_mammals;
 
 /**
  * An abstract virtual representation of a Mammal.  We will never want to instantiate a Mammal object, yet child classes of Mammal will share many implemented methods in comon.  So this makes sense as an abstract class.
@@ -8,14 +8,14 @@ package edu.nyu.cs.fb1258;
  */
 public abstract class Mammal {
 	/**
-	 * constant class attribute representing male gender.
-	 * This makes it easy to refer to male or female gender by intuitive names, rather than integers
+	 * constant class attribute representing male sex.
+	 * This makes it easy to refer to male or female sex by intuitive names, rather than integers
 	 */
 	final static int MALE = 0;
 	
 	/**
-	 * constant class attribute representing female gender.
-	 * This makes it easy to refer to male or female gender by intuitive names, rather than integers
+	 * constant class attribute representing female sex.
+	 * This makes it easy to refer to male or female sex by intuitive names, rather than integers
 	 */
 	final static int FEMALE = 1;
 	
@@ -35,9 +35,9 @@ public abstract class Mammal {
 	boolean hasHair = true;
 	
 	/**
-	 * the gender of a given mammal: 0 represents male, 1 represents female
+	 * the sex of a given mammal: 0 represents male, 1 represents female
 	 */
-	private int gender;
+	private int sex;
 	
 	/**
 	 * a method representing the action of eating
@@ -61,14 +61,14 @@ public abstract class Mammal {
 	public abstract void lactate(boolean aLot);
 
 	/**
-	 * no-args constructor randomly assigns the Mammal object's gender
+	 * no-args constructor randomly assigns the Mammal object's sex
 	 */
 	public Mammal() {
 		//not sure what to do here
 		//this.gender = Mammal.NEUTRAL;
 		double rand = Math.random() * 2;
-		int g = (int) rand;
-		this.gender = g;		
+		int s = (int) rand;
+		this.sex = s;		
 	}
 	
 	/**
@@ -76,27 +76,27 @@ public abstract class Mammal {
 	 * @param g integer representing this Mammal's gender: 0 represents male, 1 represents female
 	 */
 	public Mammal(int g) {
-		this.gender = g;
+		this.sex = g;
 	}	
 	
 	
 	//accessor methods
 	
 	/**
-	 * method to return the private gender property as an integer
-	 * @return int representing the current object's gender: 0 represents male, 1 represents female
+	 * method to return the private sex property as an integer
+	 * @return int representing the current object's sex: 0 represents male, 1 represents female
 	 */
-	public int getGender() {
-		return this.gender;
+	public int getSex() {
+		return this.sex;
 	}
 	
 	/**
-	 * overloaded accessor method to return the private gender property as a user-friendly string
-	 * @return User-friendly String representing the current object's gender: 'male' or 'female'
+	 * overloaded accessor method to return the private sex property as a user-friendly string
+	 * @return User-friendly String representing the current object's sex: 'male' or 'female'
 	 */
-	public String getGender(boolean userFriendly) {
+	public String getSex(boolean userFriendly) {
 		if (userFriendly) {
-			switch (this.gender) {
+			switch (this.sex) {
 			case Mammal.MALE:
 				return "male";
 			case Mammal.FEMALE:

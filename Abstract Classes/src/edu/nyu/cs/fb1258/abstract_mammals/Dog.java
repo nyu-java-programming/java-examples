@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258;
+package edu.nyu.cs.fb1258.abstract_mammals;
 
 /**
  * A virtual representation of a Dog, which is, of course, a type of Mammal
@@ -26,7 +26,7 @@ public class Dog extends Mammal {
 	 * no-args constructor simply calls the Mammal class's no-args constructor
 	 */
 	public Dog() {
-		super(); //the Mammal class's constructor assigns a random gender to this Dog
+		super(); //the Mammal class's constructor assigns a random sex to this Dog
 	}
 	
 	/**

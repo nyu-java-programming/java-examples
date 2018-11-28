@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258;
+package edu.nyu.cs.fb1258.moving_things;
 
 /**
  * A virtual representation of a Human, which is, of course, a type of Mammal
