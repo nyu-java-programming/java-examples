@@ -11,7 +11,7 @@ public abstract class C3 extends C2 {
 	 * This abstract class inherits the following from C2:
 	 *     public void method1(), which C2 inherited from C1
 	 *     public void method2(), which C2 inherited from C1
-	 *     public void method3(), which C2 inherited from C1, which inherited it as a default method from I2
+	 *     public void method3(), which C2 inherited from C1, which inherited it as a default method from I2, which got it from I1
 	 *     public void method4(), which C2 overrode from C1
 	 *     public void method5()
 	 */

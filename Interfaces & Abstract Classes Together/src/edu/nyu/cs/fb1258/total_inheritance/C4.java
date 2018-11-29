@@ -14,7 +14,7 @@ public class C4 extends C3 {
 	 * This class inherits the following from C3:
 	 *     public void method1(), which C3 inherited from C2, which inherited it from C1
 	 *     public void method2(), which C3 inherited from C2, which inherited it from C1
-	 *     public void method3(), which C3 inherited from C2, and C2 inherited from C1, which inherited it as a default method from I2
+	 *     public void method3(), which C3 inherited from C2, and C2 inherited from C1, which inherited it as a default method from I2, and I2 got it from I1
 	 *     public void method4(), which C3 inherited from C2, which C2 overrode from C1
 	 *     public void method5(), which C3 inherited from C2
 	 *     public abstract void method6(), which C3 declared as abstract

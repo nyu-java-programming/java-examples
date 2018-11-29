@@ -34,6 +34,7 @@ public class App extends PApplet {
 	 * Do any setup before the first frame
 	 */
 	public void setup() {
+		
 		this.background(255, 255, 255);
 		
 		//instantate several dogs and spaceships and store them in instance variables

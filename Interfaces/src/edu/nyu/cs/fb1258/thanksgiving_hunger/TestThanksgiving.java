@@ -27,6 +27,7 @@ public class TestThanksgiving {
 		meal.serve(); // try serving again
 		
 		// construct some revenge, and serve it
+		// "Revenge is a dish best served cold."
 		Revenge revenge = new Revenge();
 		revenge.serve(); // won't serve, since it's not cold
 		revenge.setIsCold(true); // make it cold

@@ -7,8 +7,6 @@ package edu.nyu.cs.fb1258.total_inheritance;
  *
  */
 public interface I1 {
-
-	public static int x = 5;
 	
 	/**
 	 * An abstract method named method1().

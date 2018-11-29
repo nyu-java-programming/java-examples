@@ -11,7 +11,7 @@ public class C2 extends C1 {
 	 * This class inherits the following from C1:
 	 *     public void method1()
 	 *     public void method2()
-	 *     public void method3(), which C1 inherited as a default method from I2
+	 *     public void method3(), which C1 inherited as a default method from I2, which got it from I1
 	 *     public void method4()
 	 */
 
