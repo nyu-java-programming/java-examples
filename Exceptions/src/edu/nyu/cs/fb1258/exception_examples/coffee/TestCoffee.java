@@ -1,11 +1,11 @@
-package edu.nyu.cs.fb1258.exception_examples;
+package edu.nyu.cs.fb1258.exception_examples.coffee;
 
 public class TestCoffee {
 
 	public static void main(String[] args) {
 
 		// make a coffee
-		Coffee latte = new Coffee(true, true, 210);
+		Coffee latte = new Coffee("latte", true, true, 210);
 		
 		// try to take a gulp... but be careful for the burned mouth scenario
 		try {
@@ -38,7 +38,7 @@ public class TestCoffee {
 			System.out.println(e);
 		}
 		catch (OutOfCoffeeException e) {
-			System.out.println("Ooh, bummer... out of coffee!");
+			System.out.println(e);
 		}
 
 	}
