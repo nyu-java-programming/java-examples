@@ -8,9 +8,12 @@ package edu.nyu.cs.fb1258.exception_examples;
  */
 public class StackOverflow {
 	
+	static int counter = 0;
+	
 	//method that calls itself
 	public static void method1() {
-		System.out.println("starting method 1");
+		StackOverflow.counter++;
+		System.out.println("starting method 1 iteration " + counter);
 		method1(); //recursion!
 		System.out.println("ending method 1");
 	}

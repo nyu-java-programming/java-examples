@@ -12,10 +12,7 @@ import java.util.Scanner;
 public class FileNotFoundExample {
 
 	public static void main(String[] args) {
-		//put code that may generate an exception within a try block to handle it
 		try {
-			//try opening a file
-			System.out.println("Trying to open the file...");
 			Scanner input = new Scanner(new File("src/data.txt"));
 			System.out.println("Successfully opened the file...");
 			//if there was no exception...
