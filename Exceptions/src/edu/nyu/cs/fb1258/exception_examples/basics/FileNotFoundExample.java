@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.exception_examples;
+package edu.nyu.cs.fb1258.exception_examples.basics;
 
 import java.io.*;
 import java.util.Scanner;
