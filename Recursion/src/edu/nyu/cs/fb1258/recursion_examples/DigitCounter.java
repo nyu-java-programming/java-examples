@@ -17,6 +17,8 @@ public class DigitCounter {
 	 * @return the number of digits in the supplied integer.
 	 */
 	public static int numDigits(int num) {
+		System.out.println("n: " + num); 
+		
 		int result; //will hold the number of digits in the num
 		
 		//handle the base case: numbers less than ten contain only 1 digit
@@ -27,6 +29,8 @@ public class DigitCounter {
 		else {
 			result = 1 + DigitCounter.numDigits(num / 10);
 		}
+		
+		System.out.println("r: " + result); 
 		
 		//return result
 		return result;

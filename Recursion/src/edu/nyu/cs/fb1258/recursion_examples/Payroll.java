@@ -97,7 +97,7 @@ public class Payroll {
 	 */
 	private int overtime(int start) {
 		int numOvertimeWorkers = 0;
-
+		
 		//make sure the start position is a valid index in the payroll array
 		if (start >= 0 && start < MAX && payroll[start] != null) {
 
@@ -114,7 +114,7 @@ public class Payroll {
 			//handle the rest recursively: calculate how many of the rest of the employees worked overtime
 			numOvertimeWorkers += overtime(start + 1);
 		}
-		
+				
 		return numOvertimeWorkers;
 	}
 

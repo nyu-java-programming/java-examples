@@ -10,7 +10,7 @@ import processing.core.*;
 public class KochSnowflake extends PApplet {
 
 	public static void main(String[] args) {
-		PApplet.main("edu.nyu.cs.fb1258.KochSnowflake");
+		PApplet.main("edu.nyu.cs.fb1258.recursion_examples.KochSnowflake");
 	}
 	
 	/**
@@ -22,7 +22,7 @@ public class KochSnowflake extends PApplet {
 	/**
 	 * how many levels deep of recursion  dive... note that this is not the  same concept as how many times a loop  iterates
 	 */
-	int levelsOfRecursion = 10;
+	int levelsOfRecursion = 5;
 	
 	/**
 	 * a counter to keep track of how many  times our recursive method is called
