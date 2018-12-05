@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.recursion_examples;
+package edu.nyu.cs.fb1258.recursion_examples.payroll;
 
 import java.util.Scanner;
 

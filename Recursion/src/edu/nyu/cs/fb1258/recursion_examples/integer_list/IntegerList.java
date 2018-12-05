@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.recursion_examples;
+package edu.nyu.cs.fb1258.recursion_examples.integer_list;
 
 /**
  * A class representing a list of integers.  Performs a linear search using recursion.  
@@ -6,14 +6,14 @@ package edu.nyu.cs.fb1258.recursion_examples;
  * @version 2
  *
  */
-public class IntegerListS {
+public class IntegerList {
 	private int[] list; //values in the list
 	
 	/**
 	 * Constructs a list of the given size.
 	 * @param size The length of the list to create
 	 */
-	public IntegerListS(int size) {
+	public IntegerList(int size) {
 		this.list = new int[size];
 	}
 	

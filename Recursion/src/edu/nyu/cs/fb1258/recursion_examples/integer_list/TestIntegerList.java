@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.recursion_examples;
+package edu.nyu.cs.fb1258.recursion_examples.integer_list;
 
 import java.util.Scanner;
 
@@ -8,9 +8,9 @@ import java.util.Scanner;
  * @version 2
  *
  */
-public class IntegerListTest {
+public class TestIntegerList {
 
-	private static IntegerListS list = new IntegerListS(10);
+	private static IntegerList list = new IntegerList(10);
 	private static Scanner scn = new Scanner(System.in);
 	
 	/**
@@ -40,7 +40,7 @@ public class IntegerListTest {
 		case 1:
 			System.out.println("How big should the list be?");
 			int size = scn.nextInt();
-			list = new IntegerListS(size);
+			list = new IntegerList(size);
 			list.randomize();
 			break;
 		case 2:
