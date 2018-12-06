@@ -19,10 +19,12 @@ public class KochSnowflake extends PApplet {
 	int width = 600;
 	int height = 600;
 	
+	final int MARGIN = 10; // margins around the edge of the window
+	
 	/**
 	 * how many levels deep of recursion  dive... note that this is not the  same concept as how many times a loop  iterates
 	 */
-	int levelsOfRecursion = 10;
+	int levelsOfRecursion = 8;
 	
 	/**
 	 * a counter to keep track of how many  times our recursive method is called
@@ -40,12 +42,10 @@ public class KochSnowflake extends PApplet {
 	 * override PApplet's setup() method
 	 */
 	public void setup() {
-		//set up the window
-		this.stroke(255, 0, 0); //red
 		
 		//create the points that represent  the beginning and ending of the  first line
-		Point p1 = new Point(0, height); // bottom left point
-		Point p2 = new Point(width,  height); //bottom right point
+		Point p1 = new Point(MARGIN, height-MARGIN); // bottom left point
+		Point p2 = new Point(width-MARGIN,  height-MARGIN); //bottom right point
 		
 		//call the makeLine method for the  first time
 		this.makeLine(p1, p2, levelsOfRecursion);
@@ -63,8 +63,7 @@ public class KochSnowflake extends PApplet {
 		methodCallCounter++; 
 		
 		//debugging
-		System.out.println("Currently at  recursion level " +  recursionLevel);
-		System.out.println("We have called  this method " + methodCallCounter  + " times.");
+		System.out.printf("method call #%2d; recursion level %2d.\n", methodCallCounter, recursionLevel);
 
 		//subtract from the counter that  keeps track of how many recursive  levels we've processed
 		recursionLevel--; 
@@ -72,8 +71,13 @@ public class KochSnowflake extends PApplet {
 		//stop recursing after we've  reached the last level
 		if (recursionLevel > 0) {
 			
-			//draw a line between the two  points
-			this.stroke(0, 255, 0);
+			//draw a line between the two  points with different color for each level of recursion
+			float r = (float) (255*recursionLevel/levelsOfRecursion);
+			float g = (float) (128*recursionLevel);
+			float b = (float) (255*recursionLevel/levelsOfRecursion);
+			this.stroke(r, g, b);
+			
+			// draw a line between the two points
 			this.line(p1.x, p1.y, p2.x, p2.y);
 
 			//calculate the midpoint of  the line
@@ -82,13 +86,6 @@ public class KochSnowflake extends PApplet {
 			midY = midY - midY/2; // subtract some factor from the  y position so that each  successive line is higher up  the screen.
 			Point midPoint = new Point(( int) midX, (int) midY); //new  point object representing this  midpoint
 //			System.out.println(midPoint.x  + ":" + midPoint.y); //debugging
-			
-			//draw a line between the  first point and the midpoint
-			this.stroke(255, 0, 0);
-			this.line(p1.x, p1.y, midPoint.x,  midPoint.y);
-			
-			//draw a line between the  midpoint and the second point
-			this.line(midPoint.x, midPoint.y, p2 .x, p2.y);	
 			
 			//recursively call this method  again to do the same thing  with each of the new lines we  just made
 			this.makeLine(p1, midPoint,  recursionLevel); //repeat this  procedure with the line from  p1 to the midpoint
