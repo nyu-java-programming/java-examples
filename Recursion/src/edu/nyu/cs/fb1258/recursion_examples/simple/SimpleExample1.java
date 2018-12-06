@@ -21,7 +21,7 @@ public class SimpleExample1 {
 		System.out.printf("Starting the method with counter=%d.\n", counter);
 
 		// check whether we have reach the counter value 10
-		if (counter < 10) {
+		if (counter < 3) {
 			// if not yet at 10...
 			// call the method itself recursively
 			SimpleExample1.doSomething(counter);

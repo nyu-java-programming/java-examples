@@ -10,7 +10,7 @@ import processing.core.*;
 public class KochSnowflake extends PApplet {
 
 	public static void main(String[] args) {
-		PApplet.main("edu.nyu.cs.fb1258.recursion_examples.KochSnowflake");
+		PApplet.main("edu.nyu.cs.fb1258.recursion_examples.koch_snowflake.KochSnowflake");
 	}
 	
 	/**
@@ -22,7 +22,7 @@ public class KochSnowflake extends PApplet {
 	/**
 	 * how many levels deep of recursion  dive... note that this is not the  same concept as how many times a loop  iterates
 	 */
-	int levelsOfRecursion = 5;
+	int levelsOfRecursion = 10;
 	
 	/**
 	 * a counter to keep track of how many  times our recursive method is called
@@ -48,7 +48,7 @@ public class KochSnowflake extends PApplet {
 		Point p2 = new Point(width,  height); //bottom right point
 		
 		//call the makeLine method for the  first time
-		this.makeLine(p1, p2,  levelsOfRecursion);
+		this.makeLine(p1, p2, levelsOfRecursion);
 	}
 
 	/**
@@ -100,19 +100,4 @@ public class KochSnowflake extends PApplet {
 	public void draw() {
 	}
 	
-}
-	
-/**
- * Class that represents an x,y coordinate  on the screen
- * @author Foo Barstein
- *
- */
-class Point {
-	int x = 0;
-	int y = 0;
-	
-	public Point(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
 }

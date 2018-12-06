@@ -42,12 +42,14 @@ public class Backwards {
 		
 		//a zero or one-character string backwards is the same as forwards
 		if (original.length() <= 1) {
-			return original;
+			// the backwards is the same as the original
+			backwards = original;
 		}
 		else {
 			//add the last character from the original to the backwards version
 			char lastChar = original.charAt(original.length() - 1);
 			backwards += lastChar; //the last character
+			//System.out.println("backwards: " + lastChar);
 
 			//flip the remaining part of the original and add it to this backwards version
 			String remainder = original.substring(0, original.length() -1); //everything up to the last character
