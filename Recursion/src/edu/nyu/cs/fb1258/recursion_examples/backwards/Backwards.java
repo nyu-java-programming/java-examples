@@ -10,23 +10,6 @@ import java.util.Scanner;
  */
 public class Backwards {
 
-	public static void main(String[] args) {
-		String original, backwards;
-		
-		//ask the user for a string
-		Scanner scn = new Scanner(System.in);
-		System.out.println("Welcome to the string backwards converter!");
-		
-		//get user input
-		System.out.print("Enter the string you would like to flip backwards: ");
-		original = scn.nextLine();
-		
-		//generate backwards version
-		backwards = Backwards.backwards(original);
-		System.out.println("The string '" + original + "' backwards is '" + backwards + "'.");
-
-	}
-	
 	/**
 	 * Returns the backwards version of a string using a recursive technique.
 	 * @param original the string to be flipped backwards

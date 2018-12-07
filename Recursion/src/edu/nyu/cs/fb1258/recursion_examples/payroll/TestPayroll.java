@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @version 2
  *
  */
-public class Overtime {
+public class TestPayroll {
 
 	public static void main(String[] args) {
 		String filename;		//Name of the file containing employee data

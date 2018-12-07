@@ -1,15 +1,12 @@
 package edu.nyu.cs.fb1258.recursion_examples.payroll;
 
 /**
- * Represents an hourly wage laborer.
+ * Represents a wage laborer, including their name, the number of hours they've worked, and their hourly pay rate.
  * @author Foo Barstein
  * @version 2
  */
 public class Employee {
-	String name;
-	int hours;	//hours worked
-	double rate; //hourly pay rate
-	
+
 	/**
 	 * Sets up the Employee object with the given data.
 	 * @param name Name of employee
@@ -21,5 +18,21 @@ public class Employee {
 		this.hours = hours;
 		this.rate = rate;
 	}
+	
+
+	/**
+	 * The name of the employee
+	 */
+	String name;
+	
+	/**
+	 * The hours worked by this employee
+	 */
+	int hours;
+	
+	/**
+	 * The hourly wage of this employee
+	 */
+	double rate;
 	
 }

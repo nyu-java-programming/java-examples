@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Represents a list of employees.
+ * Represents a list of Employees pulled from a text file, and can calculate how many of those employees worked overtime.
  * @author Foo Barstein
  * @version 2
  * 
