@@ -44,23 +44,24 @@ public class FractalTree extends JPanel {
         int mid4y = (mid3y + mid1y) / 2;
          
         java.util.Random r = new java.util.Random();
+        Color c = new Color(red[(r.nextInt() % 3) + n], green[(r.nextInt() % 3) + n], blue[(r.nextInt() % 3) + n]);
+        g1.setColor(c);
+        
+        Line2D L1 = new Line2D.Double(x, y, xn1, yn1);
+        g1.draw(L1);
+
         drawFractal(g1, mid1x, mid1y, n - 1, (angle + r.nextInt(randFact) + constFact[0]) % maxAngle);
         drawFractal(g1, mid2x, mid2y, n - 1, (angle + r.nextInt(randFact) + constFact[1]) % maxAngle);
         drawFractal(g1, mid3x, mid3y, n - 1, (angle + r.nextInt(randFact) + constFact[2]) % maxAngle);
         drawFractal(g1, mid4x, mid4y, n - 1, (angle + r.nextInt(randFact) + constFact[3]) % maxAngle);
-         
-        Color c = new Color(red[(r.nextInt() % 3) + n], green[(r.nextInt() % 3) + n], blue[(r.nextInt() % 3) + n]);
-        g1.setColor(c);
-        Line2D L1 = new Line2D.Double(x, y, xn1, yn1);
-        g1.draw(L1);
-        return;
+
     }
      
     public void paint(final Graphics g) {
         g1 = (Graphics2D) g;
         drawFractal(g1, startX, startY, numOfRecursions, startAngle);
     }
-     
+
     public static void main(String args[]) {
         JFrame FF = new JFrame("Drawing a recursive tree");
         FF.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
