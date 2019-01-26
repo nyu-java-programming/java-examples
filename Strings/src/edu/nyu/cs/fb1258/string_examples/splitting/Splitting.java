@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * An example of isolating words of text by splitting by anything that is not alphabetic character
  * @author Foo Barstein
- * @version 2
+ * @version 2.2
  *
  */
 public class Splitting {
