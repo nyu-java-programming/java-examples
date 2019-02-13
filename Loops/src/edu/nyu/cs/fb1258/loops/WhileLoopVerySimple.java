@@ -13,8 +13,6 @@ public class WhileLoopVerySimple {
 
 	public static void main(String[] args) {
 		
-		boolean x = true;
-
 		// a loop that iterates 10 times
 		int i = 0; // a counter!  also known as an accumulator
 		while (i < 10) {
@@ -24,18 +22,18 @@ public class WhileLoopVerySimple {
 		
 		
 		// a loop that stops iterating after a random number of iterations
-		x = true; // reset x to true so this loop will at least iterate once
-		while (x) {
+		boolean keepGoing = true; // set a flag to true so this loop will at least iterate once
+		while (keepGoing) {
 			System.out.println("Iterating within the second while loop");
 			// generate a random number
 			Random r = new Random();
-			x = r.nextBoolean();
+			keepGoing = r.nextBoolean(); // randomly update the value of the flag
 		}
 		
 		// a loop that keeps iterating until the user enters a value we approve of
 		Scanner scn = new Scanner(System.in); // open the scanner outside the loop, since we could potentially need to get more than one int of input
-		x = true; // reset x to true so this loop will at least iterate once
-		while (x) {
+		keepGoing = true; // reset the flag to true so this loop will at least iterate once
+		while (keepGoing) {
 			System.out.println("Iterating within the third while loop");
 
 			// get user input
@@ -44,7 +42,7 @@ public class WhileLoopVerySimple {
 			
 			// validate the user's input
 			if (num >= 1 && num <= 10) {
-				x = false;
+				keepGoing = false; // change the value of the flag to cause the loop to terminate
 				System.out.println("Thanks for the good input!... quitting loop");
 			}
 			
@@ -53,21 +51,22 @@ public class WhileLoopVerySimple {
 		scn.close(); // close the scanner resource to be nice to the processor
 		
 		// a loop that breaks at the end of the first iteration
-		x = true; // reset x to true so this loop will at least iterate once
-		while (x) {
+		keepGoing = true; // reset the flag to true so this loop will at least iterate once
+		while (keepGoing) {
 			System.out.println("This is the start of the iteration within the fourth while loop!");
-			break;
+			break; // this is bad code! using break to terminate the loop renders the flag meaningless, so why did we use a flag?
 			//System.out.println("This is the end of the iteration."); //unreachable code!
 		}
 
 		// an infinite loop with an example of bad code in the continue statement!
-		x = true; // reset x to true so this loop will at least iterate once
-		while (x) {
+		keepGoing = true; // reset the flag to true so this loop will at least iterate once
+		while (keepGoing) {
 			System.out.println("This is the start of the iteration within the fifth while loop!");
 			continue; // this is bad code!  a loop will always continue at the end of each iteration... you don't have to tell it to do this!
 			//System.out.println("This is the end of the iteration."); //unreachable code!
 		}
 		
+		// finally
 		System.out.println("Done!");
 
 	}
