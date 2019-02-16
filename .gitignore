@@ -48,3 +48,7 @@ doc/
 .settings/
 .project
 .classpath
+
+# Visual Studio Code #
+######################
+.vscode/
