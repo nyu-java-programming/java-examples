@@ -21,15 +21,28 @@ public class Move {
 		this.setAccuracy(accuracy);
 		this.setHealthImpact(healthImpact);
 	}
+	
+	
 	// properties
 	
+	/**
+	 * The name of this move
+	 */
 	private String name;
 	
+	/**
+	 * The accuracy of this move as an int between 0 and 100
+	 */
 	private int accuracy;
 	
+	/**
+	 * The impact of this move on the health points of the recipient
+	 */
 	private int healthImpact;
+
 	
 	// capabilities
+	// tbd ... fillout more the capabilities of a move, if any
 	
 	// getters
 	
@@ -50,6 +63,7 @@ public class Move {
 	}
 	
 	// setters
+	
 	/**
 	 * Classic 'getter method' for the name property
 	 * @return The name of this Move

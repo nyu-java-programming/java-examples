@@ -10,6 +10,10 @@ package edu.nyu.cs.fb1258.pokemon;
 public class Stage {
 
 	// properties
+	
+	/**
+	 * The name of this stage
+	 */
 	private String name;
 		
 	// capabilities ... tbd

@@ -20,8 +20,16 @@ public class Type {
 	}
 
 	// properties of a Type
+	
+	/**
+	 * The name of this Type
+	 */
 	private String name;
 	
+	/**
+	 * A map of all the various opponent Types... this will be used to map out how many points will be gained or lost when this Type fights the other Types
+	 * Tbd ... not yet complete or used... an array is probably not the right data structure for this... a Map would be better
+	 */
 	private Type[] opponentTypes;
 	
 	// capabilities of a Type

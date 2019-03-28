@@ -57,23 +57,53 @@ public class Pokemon {
 	}
 	
 	// what are properties?
+	
+	/**
+	 * The name of this Pokemon character
+	 */
 	private String name;
 	
+	/**
+	 * The color of this Pokemon character
+	 */
 	private String color;
 	
+	/**
+	 * The list of moves this Pokemon character can do; limited to max 4; represented as Move objects
+	 */
 	private Move[] moveset = new Move[4]; // max number of moves is 4, so set the array length to 4
+	
+	/**
+	 * The number of Moves this Pokemon character can currently do
+	 */
 	private int numMoves = 0; // keep track of how many moves this Pokemon already has so we don't go over 4
 		
+	/**
+	 * The list of items this Pokemon character has received
+	 */
 	private ArrayList<Item> items = new ArrayList<Item>(); // a Pokemon can hold unlimited items, so ArrayLists make it easy
 	
+	/**
+	 * The type of Pokemon character this is, represented as a Type object
+	 */
 	private Type type;
 	
+	/**
+	 * The number of health points this Pokemon character currently has
+	 */
 	private int health;
 
+	/**
+	 * The stage that this Pokemon character is currently in, represented as a Stage object
+	 */
 	private Stage stage;
 	
+	/**
+	 * The level this Pokemon character is currently at, represented as an int value
+	 */
 	private int level = 0; // default to level 0
 
+	
 	// what are the capabilities?
 	
 	/**

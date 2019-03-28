@@ -24,11 +24,22 @@ public class Item {
 	}
 	
 	// properties of an Item
+	
+	/**
+	 * The name of this item
+	 */
 	private String name;
 	
+	/**
+	 * The number of health points this item confers upon the recipient
+	 */
 	private int healthValue;
 	
+	/**
+	 * The number of level points this item confers upon the recipient
+	 */
 	private int levelValue;
+
 	
 	// capabilities of an Item
 	
