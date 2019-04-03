@@ -58,7 +58,7 @@ public class Human extends Mammal {
 	 * @param sex int representing the Human's sex: 0=male, 1=female
 	 */
 	public Human(String firstName, String lastName, int sex) {
-		super();
+		super(sex);
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}

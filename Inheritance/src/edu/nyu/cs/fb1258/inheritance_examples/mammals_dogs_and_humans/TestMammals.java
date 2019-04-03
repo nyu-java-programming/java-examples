@@ -46,8 +46,6 @@ public class TestMammals {
 		
 		//polymorphism is easy!
 		Mammal meAsAMammal = new Human("Amos", "Bloomberg");
-		//meAsMammal.firstName = "Amos";
-		//meAsMammal.lastName = "Bloomberg";
 		
 		Human meAsAHuman = (Human) meAsAMammal; //cast to the more specific type
 		
@@ -62,17 +60,21 @@ public class TestMammals {
 		//meAsAMammal.speak(); //this is not allowed!!!  Mammals do not have a speak method.
 		meAsAHuman.speak(); //call a specifically Human method
 		
-		
+		// make a few dogs
 		Dog dog1 = new Dog("Spot");
 		Dog dog2 = new Dog("Fido");
 		
+		// is a Dog a Mammal?
 		if (dog1 instanceof Mammal) {
 			System.out.println("This dog is a Mammal!");
 		}
+		
+		// is a Dog a Dog?
 		if (dog1 instanceof Dog) {
 			System.out.println("This dog is a Dog!");
 		}
 		
+		// are two dogs the same?
 		if (dog1.equals(dog2)) {
 			System.out.println("They're the same dog!");
 		}
