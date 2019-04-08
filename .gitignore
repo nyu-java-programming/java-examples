@@ -34,3 +34,21 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Eclipse #
+###########
+*/bin/
+*/doc/
+*/settings/
+*/.project
+*/.classpath
+.metadata
+bin/
+doc/
+.settings/
+.project
+.classpath
+
+# Visual Studio Code #
+######################
+.vscode/

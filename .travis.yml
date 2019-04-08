@@ -1,1 +1,8 @@
 language: java
+
+notifications:
+  email:
+    recipients:
+      - amos@cs.nyu.edu
+    on_success: never # default: change
+    on_failure: always # default: always
