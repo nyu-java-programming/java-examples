@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Abstract Classes/src"/>
+	<classpathentry kind="src" path="Arrays/src"/>
+	<classpathentry kind="src" path="Basic Object-Oriented Programming/src"/>
+	<classpathentry kind="src" path="Example of OOP/src"/>
+	<classpathentry kind="src" path="Exceptions/src"/>
+	<classpathentry kind="src" path="Inheritance/src"/>
+	<classpathentry kind="src" path="Interfaces &amp; Abstract Classes Together/src"/>
+	<classpathentry kind="src" path="Interfaces/src"/>
+	<classpathentry kind="src" path="JSynExperiments/src"/>
+	<classpathentry kind="src" path="Loops/src"/>
+	<classpathentry kind="src" path="Methods - miscellaneous/src"/>
+	<classpathentry kind="src" path="Methods/src"/>
+	<classpathentry kind="src" path="Multi-Dimensional Arrays/src"/>
+	<classpathentry kind="src" path="Pokemon OOP/src"/>
+	<classpathentry kind="src" path="Practice/src"/>
+	<classpathentry kind="src" path="Processing/src"/>
+	<classpathentry kind="src" path="Recap OOP/src"/>
+	<classpathentry kind="src" path="Recursion/src"/>
+	<classpathentry kind="src" path="Selections/src"/>
+	<classpathentry kind="src" path="Static Example/src"/>
+	<classpathentry kind="src" path="Strings/src"/>
+	<classpathentry kind="lib" path="Recursion/core.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

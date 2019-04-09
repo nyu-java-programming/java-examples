@@ -39,15 +39,8 @@ Thumbs.db
 ###########
 */bin/
 */doc/
-*/settings/
-*/.project
-*/.classpath
-.metadata
 bin/
 doc/
-.settings/
-.project
-.classpath
 
 # Visual Studio Code #
 ######################

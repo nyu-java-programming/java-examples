@@ -1,0 +1,26 @@
+INDEX VERSION 1.131+/Users/amos/Documents/courses/cs101/java-examples/.metadata/.plugins/org.eclipse.jdt.core
+829174997.index
+410688719.index
+482775344.index
+2972515023.index
+4255158242.index
+1492766893.index
+901909309.index
+3508243499.index
+2169149872.index
+1515719280.index
+2368948811.index
+3865976396.index
+1524795990.index
+1549653844.index
+2614036432.index
+2543628612.index
+89227361.index
+4198939195.index
+3689620180.index
+1095220760.index
+3323084766.index
+2895854221.index
+2738824068.index
+3235734095.index
+3727293105.index
