@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * A traditional Thanksgiving meal.  Thanksgiving meals must have turkey and cranberry in them in order to be ready to serve.
- * @author Foo Barstein.
+ * @author Foo Barstein
  * @version 1
  *
  */
