@@ -21,7 +21,7 @@ public class SimpleExample2 {
 		System.out.printf("Starting the method with counter=%d.\n", counter);
 		
 		// check whether we have reach the counter value 10
-		if (counter < 10) {
+		if (counter < 3) {
 			// this method calls itself twice recursively with every one invocation
 			SimpleExample2.doSomething(counter);
 			SimpleExample2.doSomething(counter);
