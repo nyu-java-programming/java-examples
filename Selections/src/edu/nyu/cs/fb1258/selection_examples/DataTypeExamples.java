@@ -1,3 +1,5 @@
+package edu.nyu.cs.fb1258.selection_examples;
+
 public class DataTypeExamples {
 
     public static void main(String[] args) {

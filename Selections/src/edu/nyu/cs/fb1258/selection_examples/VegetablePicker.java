@@ -1,3 +1,5 @@
+package edu.nyu.cs.fb1258.selection_examples;
+
 // import the Scanner from the Java API (Application Programming Interface)
 import java.util.Scanner;
 
