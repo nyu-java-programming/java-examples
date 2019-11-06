@@ -26,7 +26,7 @@ public class PlayWithCircles extends PApplet {
 	 */
 	public static void main(String[] args) {
 		// the main method must call PApplet's main method and pass it this class's package and class name as a String 
-		PApplet.main("edu.nyu.cs.fb1258.PlayWithCircles");
+		PApplet.main("edu.nyu.cs.fb1258.processing_examples.objects.PlayWithCircles");
 	}
 	
 	/**

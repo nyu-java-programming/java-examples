@@ -48,6 +48,8 @@ public class Circle {
 		// set up pseudo-random x, y coordinates
 		int x = (int) (Math.random() * Circle.MAX_X);
 		int y = (int) (Math.random() * Circle.MAX_Y);
+		this.setX(x);
+		this.setY(y);
 
 		// set up pseudo-random speed in the x and y directions
 		this.setSpeedX((int) (Math.random() * Circle.MAX_SPEED) * 2 - Circle.MAX_SPEED );
