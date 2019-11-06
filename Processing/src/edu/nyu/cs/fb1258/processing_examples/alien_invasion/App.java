@@ -15,7 +15,7 @@ import processing.core.*;
 public class App extends PApplet {
 	
 	//window size of this app
-	private final int w = 800;
+	private static final int w = 800;
 	private final int h = 400;
 	
 	//make constants for some common colors... it's ok to make constants public
@@ -25,7 +25,7 @@ public class App extends PApplet {
 	//make constants for some common spacing... it's ok to make constants public
 	public final static int ALIEN_SPACING = 20; 
 	public final static int APP_MARGIN = 60; 
-	public final static int NUM_ALIENS = 20;
+	public final static int NUM_ALIENS = 40;
 	
 	//variable to hold the spaceship
 	private Spaceship spaceship;
@@ -112,7 +112,7 @@ public class App extends PApplet {
 	}
 	
 	/**
-	 * Called repeatedly approximately 24 times  per second (Processing's default "frame  rate").  Used to update the animation and  enforce game play logic.
+	 * Called repeatedly approximately 60 times per second (Processing's default "frame  rate").  Used to update the animation and  enforce game play logic.
 	 */
 	public void draw() {
 		//wipe the screen blank
