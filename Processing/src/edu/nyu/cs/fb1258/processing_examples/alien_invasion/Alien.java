@@ -38,8 +38,8 @@ public class Alien {
 		this.y = y; //y position
 		
 		//set random speeds
-		this.speedX = this.getRandomSpeed();
-		this.speedY = this.getRandomSpeed();
+		this.speedX = Alien.getRandomSpeed();
+		this.speedY = Alien.getRandomSpeed();
 		
 		//load the alien image and store in  PImage variable
 		this.img = app.loadImage(Alien.ALIEN_IMAGE_PATH);
@@ -66,7 +66,7 @@ public class Alien {
 	 * Get a random speed.
 	 * @return random int between min and max  speed settings
 	 */
-	public int getRandomSpeed() {
+	public static int getRandomSpeed() {
 		//generate a random int between the  alien's -MAX_SPEED and +MAX_SPEED
 		int speed = (int) ((Math.random() * Alien.MAX_SPEED * 2) - Alien.MAX_SPEED);
 		return speed;
@@ -115,8 +115,8 @@ public class Alien {
 	 * Move this alien to a randomly-generated new position
 	 */
 	public void move() {
-		int speedX = this.getRandomSpeed(); // new speed in x direction
-		int speedY = this.getRandomSpeed(); // new speed in y direction
+		int speedX = Alien.getRandomSpeed(); // new speed in x direction
+		int speedY = Alien.getRandomSpeed(); // new speed in y direction
 
 		this.setSpeed(speedX, speedY); //update  internal speed info
 		

@@ -20,8 +20,8 @@ public class Spaceship {
 	private PImage img; //will hold the image to  use for this spaceship
 	
 	private int x, y; //position
-	private int speedX = 5; //speed in x  direction... start out going to the right
-	private int speedY = 5; //speed in Y direction... the y position is changed by this amount every time the ship goes up or down
+	private int speedX = 1; //speed in x  direction... start out going to the right
+	private int speedY = 1; //speed in Y direction... the y position is changed by this amount every time the ship goes up or down
 	
 	/**
 	 * Constructor for a spaceship. 
@@ -67,7 +67,7 @@ public class Spaceship {
 		boolean outOfBoundsToTheRight = newX >  this.app.width - this.getWidth() - App. APP_MARGIN; //too far to the right?
 
 		//if out of bounds...
-		if (outOfBoundsToTheRight ||  outOfBoundsToTheLeft) {
+		if (outOfBoundsToTheRight || outOfBoundsToTheLeft) {
 			 //reverse direction
 			this.toggleDirection(); //inverts  the sign of speed
 			newX = this.x + this.speedX; // calculate move in new direction
@@ -158,7 +158,7 @@ public class Spaceship {
 	public void shoot() {
 		//create a new bullet object positioned  at the center of this spaceship
 		int x = (int) (this.x + (this.getWidth()  / 2)); //the center x position of this  spaceship
-		int y = (int) (this.y - (this. getHeight() / 2)); //the center y  position of this spaceship
+		int y = this.y; // the top of the spaceship
 
 		//create bullet object
 		Bullet bullet = new Bullet(x, y, this.app);

@@ -15,12 +15,12 @@ import processing.core.*;
 public class App extends PApplet {
 	
 	//window size of this app
-	private static final int w = 800;
-	private final int h = 400;
+	private static final int WIDTH = 800;
+	private static final int HEIGHT = 400;
 	
 	//make constants for some common colors... it's ok to make constants public
-	public final int BLACK = this.color(0,0,0);
-	public final int WHITE = this.color(255,255,255);
+	private final int BLACK = this.color(0,0,0);
+	private final int WHITE = this.color(255,255,255);
 	
 	//make constants for some common spacing... it's ok to make constants public
 	public final static int ALIEN_SPACING = 20; 
@@ -75,14 +75,13 @@ public class App extends PApplet {
 	 * Called once to set up window
 	 */
 	public void settings() {
-		this.size(this.w, this.h); //set window size		
+		this.size(App.WIDTH, App.HEIGHT); //set window size		
 	}
 	
 	/**
 	 * Called once on load. Used to create the  window and "global" settings.
 	 */
 	public void setup() {
-		this.background(this.BLACK); //set background  color
 		
 		//initialize spaceship
 		this.spaceship = new Spaceship(this); // pass reference to this App object
@@ -102,7 +101,7 @@ public class App extends PApplet {
 			x += alien.getWidth() + App.ALIEN_SPACING; 
 			
 			//stay within bounds of the screen
-			if (x > this.width - alien.getWidth() - App.APP_MARGIN) {
+			if (x > App.WIDTH - alien.getWidth() - App.APP_MARGIN) {
 				//move down to the next line  before drawing next alien
 				x = App.APP_MARGIN; //reset back  to left side of screen
 				y += alien.getHeight() + App.ALIEN_SPACING; //upadte y so the  next row of aliens appears  further down the screen
