@@ -6,7 +6,6 @@ package edu.nyu.cs.fb1258.array_examples;
  * @version 0.6
  *
  */
-
 public class Ragged {
 
 	public static void main(String[] args) {
@@ -48,16 +47,16 @@ public class Ragged {
         for (int i=0; i<foo.length; i++) {
             for (int j=0; j<foo[i].length; j++) {
                 int val = foo[i][j];
-                System.out.printf("%5sThe value at array index [%d][%d] is $d\n", "", i, j, val);
+                System.out.printf("%5sThe value at array index [%d][%d] is %d\n", "", i, j, val);
             }
         }
-
-        //loop through each sub-array the easy 'syntactic sugar' way and output every element
+        
+        // loop through 
         System.out.println("\nLooping through the array in 'foreach loop' style:");
-        for (int[] subArray : bar) {
-            for (int val : subArray) {
-                System.out.printf("%5sThe current value in the array is %d\n", "", val);
-            }
+        for (int[] row : foo) {
+        	for (int col : row) {
+                System.out.printf("%5sThe current value in the array is %d\n", "", col);
+        	}
         }
 
 	}
