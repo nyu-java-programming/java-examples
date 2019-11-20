@@ -15,7 +15,8 @@ public class Meal implements Servable {
 	 * @param dishes The dishes to include in this meal
 	 */
 	public Meal(ArrayList<Dish> dishes) {
-		System.out.println("Constructing a meal...");
+		String className = this.getClass().getSimpleName();
+		System.out.printf("\nConstructing a %s...\n", className);
 		
 		// set this Meal's dishes
 		this.setDishes(dishes); 
@@ -46,7 +47,8 @@ public class Meal implements Servable {
 	 * Serve the meal!  This method implementation must be in this class because the class implements the Servable interface.
 	 */
 	public void serve() {
-		System.out.println("Serving the meal...");
+		String className = this.getClass().getSimpleName();
+		System.out.printf("Serving the %s...\n\n", className);
 	}
 	
 	/**

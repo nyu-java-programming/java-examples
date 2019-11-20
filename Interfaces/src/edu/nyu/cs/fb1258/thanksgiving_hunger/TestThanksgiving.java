@@ -30,7 +30,7 @@ public class TestThanksgiving {
 		// "Revenge is a dish best served cold."
 		Revenge revenge = new Revenge();
 		revenge.serve(); // won't serve, since it's not cold
-		revenge.setIsCold(true); // make it cold
+		revenge.chill(); // make it cold
 		revenge.serve(); // try serving again
 
 	}

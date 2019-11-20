@@ -17,7 +17,8 @@ public class ThanksgivingMeal extends Meal {
 	public ThanksgivingMeal(ArrayList<Dish> dishes) {
 		// by default, the Meal class's no-args construct is called, i.e. super();
 
-		System.out.println("Constructing a Thanksgiving meal...");
+		String className = this.getClass().getSimpleName();
+		System.out.printf("\nConstructing a %s...\n", className);
 
 		// setting up a ThanksgivingMeal has different logic than setting up a regular Meal
 		// start off with a blank ArrayList of Dishes
@@ -52,14 +53,17 @@ public class ThanksgivingMeal extends Meal {
 	 * Serve this meal - it must have turkey and cranberry in order to be properly served.
 	 */
 	public void serve() {
+		String className = this.getClass().getSimpleName();
+		System.out.printf("Serving the %s...\n", className);
+		
 		// only serve if it's ready...
 		if (this.isReadyToServe()) {
 			// the meal is ready!
-			System.out.println("Serving the meal... Happy Thanksgiving!");
+			System.out.printf("The %s is served! Happy Thanksgiving!\n\n", className);
 		}
 		else {
 			// the meal is not ready - it must not have turkey or cranberry
-			System.out.println("This meal cannot be served.  Please make sure you have turkey and cranberry sauce!");
+			System.out.printf("The %s cannot be served.  Did you remember to include the turkey and cranberry sauce?!\n", className);
 		}
 	}
 	

@@ -14,7 +14,8 @@ public class Revenge implements Servable {
 	 * No-args constructor for Revenge
 	 */
 	public Revenge() {
-		System.out.println("\nConstructing your revenge...");
+		String className = this.getClass().getSimpleName();
+		System.out.printf("Constructing a %s...\n", className);
 	}
 	
 	/**
@@ -36,16 +37,24 @@ public class Revenge implements Servable {
 	 * A method by this name must be present, by the rules of the Servable interface.
 	 */
 	public void serve() {
+		String className = this.getClass().getSimpleName();
+		System.out.printf("Serving the %s...\n", className);
 		if (this.isReadyToServe()) {
 			// the revenge is cold, so serve it!
-			System.out.println("Serving your revenge.  Enjoy!");
+			System.out.printf("The %s is served!  Enjoy!\n\n", className);
 		}
 		else {
 			// the revenge is not cold, so do not serve it.
-			System.out.println("This revenge cannot be served.  Please make sure your revenge is cold and try serving again.");
+			System.out.printf("This %s cannot be served...  Did you remember to chill it?\n", className);
 		}
 	}
 	
+	public void chill() {
+		this.setIsCold(true);
+		String className = this.getClass().getSimpleName();
+		System.out.printf("Chilling the %s...\n", className);
+		
+	}
 	// classic 'getter' and setter' methods
 
 	/**
