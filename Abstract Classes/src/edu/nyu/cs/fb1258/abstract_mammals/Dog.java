@@ -30,27 +30,28 @@ public class Dog extends Mammal {
 	}
 	
 	/**
-	 * overloaded constructor assigns a random gender and sets the Dog object's name
+	 * overloaded constructor assigns a random sex and sets the Dog object's name
 	 * @param n String name of the new Dog object
 	 */
-	public Dog(String n) {
-		super(); //the Mammal class's constructor assigns a random gender to this Dog
+	public Dog(String name) {
+		super(); //the Mammal class's constructor assigns a random sex to this Dog
 
 		//set this dog's name using the setter designed for this purpose
-		this.setName(n);
-	}
-	
-	/**
-	 * override the default Mammal sleep method with a Dog-specific sleep style.
-	 */
-	public void sleep() {
-		System.out.println(this.name + " is sleeping ...woof whimper whoof.");
+		this.setName(name);
 	}
 	
 	public boolean equals(Dog dog) {
         return (this.name.equals(dog.name));
     }
 
+	/**
+	 * override the default Mammal sleep method with a Dog-specific sleep style.
+	 */
+	public void sleep() {
+		super.sleep();
+		System.out.println(this.name + " is sleeping dog style ...woof whimper whoof.");
+	}
+	
 	@Override
 	public void eat() {
 		System.out.println(this.name + " is eating dog style");
@@ -58,6 +59,7 @@ public class Dog extends Mammal {
 
 	@Override
 	public void lactate() {
+		super.lactate();
 		System.out.println(this.name + " is lactating dog style");
 	}
 

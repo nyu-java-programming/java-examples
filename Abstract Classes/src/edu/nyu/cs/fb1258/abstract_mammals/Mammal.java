@@ -47,12 +47,16 @@ public abstract class Mammal {
 	/**
 	 * a method representing the action of sleeping
 	 */
-	public abstract void sleep();
+	public void sleep() {
+		System.out.println("Mammal snoring...");
+	}
 	
 	/**
 	 * a method representing the action of lactating
 	 */
-	public abstract void lactate();
+	public void lactate() {
+		System.out.println("Mammal lactating!");
+	}
 	
 	/**
 	 * An overloaded lactate() method, which takes a boolean argument
@@ -65,7 +69,7 @@ public abstract class Mammal {
 	 */
 	public Mammal() {
 		//not sure what to do here
-		//this.gender = Mammal.NEUTRAL;
+		//this.sex = Mammal.NEUTRAL;
 		double rand = Math.random() * 2;
 		int s = (int) rand;
 		this.sex = s;		
@@ -75,8 +79,8 @@ public abstract class Mammal {
 	 * overloaded constructor to explicitly assign the Mammal object's gender
 	 * @param g integer representing this Mammal's gender: 0 represents male, 1 represents female
 	 */
-	public Mammal(int g) {
-		this.sex = g;
+	public Mammal(int s) {
+		this.sex = s;
 	}	
 	
 	
@@ -107,17 +111,5 @@ public abstract class Mammal {
 		return "unknown";
 	}
 
-	
-	public static void main(String[] args) {
-		//make a dog object and call its eat method
-		Dog spot = new Dog("Spot");
-		spot.eat();
-		
-		//polymorphism!
-		Mammal fido = new Dog("Fido");
-		fido.eat();
-		
-		
-	}
 	
 }

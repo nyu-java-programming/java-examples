@@ -29,22 +29,20 @@ public class Human extends Mammal {
 	 * @param firstName String of first name of the new Human object
 	 */
 	public Human(String firstName) {
-		super();  //call parent class's no-args constructor to assign a random gender to this Human
+		super();  //call parent class's no-args constructor to assign a random sex to this Human
 		this.firstName = firstName;
-		this.lastName = null; //no last name... this is redundant since the default value for un-assigned Strings is null
 	}
 	
 	/**
 	 * overloaded constructor sets the Human object's first and last names
 	 * @param firstName String of first name of the new Human object
-	 * @param gender int representing the Human's gender: 0=male, 1=female
+	 * @param sex int representing the Human's gender: 0=male, 1=female
 	 */
-	public Human(String firstName, int gender) {
-		super(gender);  //call parent class's constructor and pass it the gender to assign to this Human
+	public Human(String firstName, int sex) {
+		super(sex);  //call parent class's constructor and pass it the gender to assign to this Human
 		
 		//set some Human-specific properties
 		this.firstName = firstName;
-		this.lastName = null;
 	}
 	
 	/**
@@ -62,22 +60,14 @@ public class Human extends Mammal {
 	 * overloaded constructor that sets the Human object's first and last names, as well as gender.
 	 * @param firstName String of first name of the new Human object
 	 * @param lastName String of last name of the new Human object
-	 * @param gender int representing the Human's gender: 0=male, 1=female
+	 * @param sex int representing the Human's gender: 0=male, 1=female
 	 */
-	public Human(String firstName, String lastName, int gender) {
-		super();
+	public Human(String firstName, String lastName, int sex) {
+		super(sex);
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
 
-	/**
-	 * override the default Mammal sleep method with a Human-specific sleep style.
-	 */
-	public void sleep() {
-		//then doing some additional Human type sleeping...
-		System.out.println(this.firstName + " is sleeping ...snore snore snore.");
-	}
-	
 	/**
 	 * A specifically human method that other Mammals don't have
 	 */
@@ -85,15 +75,20 @@ public class Human extends Mammal {
 		System.out.println(this.firstName + " is saying something interesting...");
 	}
 
+	/**
+	 * override the default Mammal sleep method with a Human-specific sleep style.
+	 */
+	public void sleep() {
+		super.sleep();
+		//then doing some additional Human type sleeping...
+		System.out.println(this.firstName + " is sleeping ...snore snore snore.");
+	}
+	
 	@Override
 	public void eat() {
-		System.out.println(this.firstName + " is eating dog style");
+		System.out.println(this.firstName + " is eating human style");
 	}
 
-	@Override
-	public void lactate() {
-		System.out.println(this.firstName + " is lactating dog style");
-	}
 
 	@Override
 	public void lactate(boolean aLot) {
