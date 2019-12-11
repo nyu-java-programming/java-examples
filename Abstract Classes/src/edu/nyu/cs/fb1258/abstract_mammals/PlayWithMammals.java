@@ -3,24 +3,29 @@ package edu.nyu.cs.fb1258.abstract_mammals;
 public class PlayWithMammals {
 
 	public static void main(String[] args) {
-		//make a dog object and call its eat method
+		// a dog!
 		Dog spot = new Dog("Spot");
-		spot.eat();
 		
-		//polymorphism!
-		Mammal fido = new Dog("Fido");
-		fido.lactate();
+		// a human!
+		Human hume = new Human("Foo", "Barstein");
 		
-		Human hume1 = new Human("Foo", "Barstein");
-		hume1.speak();
-		hume1.eat();
-		
-		// polymorphism!
-		Mammal hume2 = new Human("Bar", "Bazburger");
-		if (hume2 instanceof Human) {
-			((Human) hume2).speak();
+		// polymorphism allows us to perform bulk operations on objects of related but different classes
+		Mammal[] mammies = {spot, hume};
+		for (Mammal mam : mammies) {
+			System.out.println(""); // line break
+			
+			mam.lactate();
+			mam.eat(); // remember to eat after lactation!
+			mam.sleep(); // tired!
+			
+			// have any human objects also speak in their sleep
+			if (mam instanceof Human) {
+				((Human) mam).speak();
+			}
+			
 		}
-		hume2.eat();
+		
+		
 		
 	}
 }

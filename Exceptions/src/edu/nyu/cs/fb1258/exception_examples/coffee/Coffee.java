@@ -85,14 +85,16 @@ public class Coffee {
 			this.setTemperature(this.getTemperature() - Coffee.TEMPERATURE_LOSS_PER_SIP);
 
 			// check whether this is mouth burning temperature
-			if (this.temperature >= Coffee.MAX_TEMPERATURE_FOR_COMFORT) {
-				throw new BurnedMouthException(this.type, this.temperature);
+			if (this.getTemperature() >= Coffee.MAX_TEMPERATURE_FOR_COMFORT) {
+				BurnedMouthException e = new BurnedMouthException(this.type, this.temperature);
+				throw e;
 			}
 			
 
 		}
 		else {
-			throw new OutOfCoffeeException(this.type);
+			OutOfCoffeeException e = new OutOfCoffeeException(this.type);
+			throw e;
 		}
 		
 	}

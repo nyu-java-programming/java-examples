@@ -17,7 +17,7 @@ public class TestPayroll {
 		Scanner scn = new Scanner(System.in);
 		
 		System.out.println("\nPayroll Program");
-		System.out.print("Enter the name of the file containing payroll data: ");
+		System.out.print("Enter the name of the file containing payroll data.\nFor example, payroll.txt or payroll2.txt.\nFilename: ");
 
 		//get the name of the file from the user
 		filename = scn.nextLine();
@@ -26,7 +26,7 @@ public class TestPayroll {
 		Payroll p = new Payroll();
 		
 		//read in the data from the file
-		p.readPayrollInfo("src/" + filename);
+		p.readPayrollInfo("src/edu/nyu/cs/fb1258/recursion_examples/payroll/" + filename);
 		
 		//if the payroll data has been read, analyze the data
 		if (p.hasData) {

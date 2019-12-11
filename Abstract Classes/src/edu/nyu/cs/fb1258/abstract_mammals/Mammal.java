@@ -40,22 +40,17 @@ public abstract class Mammal {
 	private int sex;
 	
 	/**
-	 * a method representing the action of eating
-	 */
-	public abstract void eat();
-	
-	/**
 	 * a method representing the action of sleeping
 	 */
 	public void sleep() {
-		System.out.println("Mammal snoring...");
+		System.out.println("Warning! Mammal snoring...");
 	}
 	
 	/**
 	 * a method representing the action of lactating
 	 */
 	public void lactate() {
-		System.out.println("Mammal lactating!");
+		System.out.println("Warning!  Mammal lactating!");
 	}
 	
 	/**
@@ -64,6 +59,11 @@ public abstract class Mammal {
 	 */
 	public abstract void lactate(boolean aLot);
 
+	/**
+	 * a method representing the action of eating, which perhaps sub-classes will implement differently from one-another
+	 */
+	public abstract void eat();
+	
 	/**
 	 * no-args constructor randomly assigns the Mammal object's sex
 	 */

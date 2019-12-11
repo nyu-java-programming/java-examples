@@ -11,13 +11,16 @@ public class TestDigitCounter {
 		System.out.println("Welcome to the digit counter program!");
 		System.out.println("Please use integers only.");
 		
-		//get base
+		// get base
 		System.out.print("Enter the number you would like to count the digits of: ");
 		num = scn.nextInt(); //assume valid int
 		
-		//calculate digits
+		// calculate digits
 		digits = DigitCounter.numDigits(num);
 		System.out.println("The number " + num + " has " + digits + " digits");
+		
+		// close the scanner
+		scn.close();
 	}
 
 }
