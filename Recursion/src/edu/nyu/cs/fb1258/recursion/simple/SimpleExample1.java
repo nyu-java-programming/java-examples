@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.recursion_examples.simple;
+package edu.nyu.cs.fb1258.recursion.simple;
 
 /**
  * A method calls itself recursively a finite number of times.

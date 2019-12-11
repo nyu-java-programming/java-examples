@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.recursion_examples.digit_counter;
+package edu.nyu.cs.fb1258.recursion.digit_counter;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.recursion_examples.power_calculator;
+package edu.nyu.cs.fb1258.recursion.power_calculator;
 
 import java.util.Scanner;
 

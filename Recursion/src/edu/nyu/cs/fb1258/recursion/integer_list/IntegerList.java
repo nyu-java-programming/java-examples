@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.recursion_examples.integer_list;
+package edu.nyu.cs.fb1258.recursion.integer_list;
 
 /**
  * A class representing a list of integers.  Performs a linear search using recursion.  

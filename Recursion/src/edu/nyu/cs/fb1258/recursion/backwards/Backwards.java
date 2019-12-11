@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.recursion_examples.backwards;
+package edu.nyu.cs.fb1258.recursion.backwards;
 
 import java.util.Scanner;
 

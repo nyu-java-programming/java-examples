@@ -1,10 +1,10 @@
-package edu.nyu.cs.fb1258.recursion.mandelbrot;
+package edu.nyu.cs.fb1258.fractals.mandelbrot;
 
 import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.*;
 
-public final class MandelbrotFractal extends Applet implements MouseListener {
+public final class MandelbrotImage extends Applet implements MouseListener {
 	private int max = 64;
 	private Color[] colors = new Color[48];
 	private double viewX = 0.0;

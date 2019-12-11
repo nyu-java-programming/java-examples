@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.recursion_examples.koch_snowflake;
+package edu.nyu.cs.fb1258.fractals.koch_snowflake;
 
 import processing.core.*;
 

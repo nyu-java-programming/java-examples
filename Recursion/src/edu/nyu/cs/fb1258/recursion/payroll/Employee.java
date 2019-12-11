@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.recursion_examples.payroll;
+package edu.nyu.cs.fb1258.recursion.payroll;
 
 /**
  * Represents a wage laborer, including their name, the number of hours they've worked, and their hourly pay rate.
