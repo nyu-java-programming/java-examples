@@ -1,4 +1,4 @@
-package simplest_stuff;
+package edu.nyu.cs.fb1258;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
