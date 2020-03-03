@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.multidimensional_arrays.exam_review;
+package edu.nyu.cs.fb1258.array_examples;
 
 public class SyntacicSugarExploraation {
 	int x = 5; //protected!

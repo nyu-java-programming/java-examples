@@ -1,4 +1,4 @@
-package edu.nyu.cs.fb1258.array_examples.exam_review;
+package edu.nyu.cs.fb1258.array_examples;
 
 public class Simple2DArray {
 	
