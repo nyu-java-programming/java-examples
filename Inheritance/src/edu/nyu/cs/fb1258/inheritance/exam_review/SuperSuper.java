@@ -24,6 +24,7 @@ class A {
 	public int getX() {
 		return this.x;
 	}
+	
 }
 
 class B extends A {
@@ -38,7 +39,7 @@ class B extends A {
 	public int getX() {
 		return super.getX() + 10;
 	}
-
+	
 }
 
 class C {

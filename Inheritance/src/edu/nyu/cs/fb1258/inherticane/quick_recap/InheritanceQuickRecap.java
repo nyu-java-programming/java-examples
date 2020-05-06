@@ -17,7 +17,6 @@ public class InheritanceQuickRecap {
 		System.out.println(c.getX());
 		System.out.println(c.getMessage());
 
-		
 	}
 
 }

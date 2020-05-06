@@ -23,5 +23,6 @@
 	<classpathentry kind="src" path="Static Example/src"/>
 	<classpathentry kind="src" path="Strings/src"/>
 	<classpathentry kind="lib" path="Recursion/core.jar"/>
+	<classpathentry kind="lib" path="Processing/src/core.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
