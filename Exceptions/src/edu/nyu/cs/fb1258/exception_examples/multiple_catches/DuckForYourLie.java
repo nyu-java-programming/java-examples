@@ -37,7 +37,8 @@ public class DuckForYourLie {
 		catch (Exception e) {
 			System.out.println("Some other type of exception occured");
 			System.out.println(e);
-		}	}
+		}	
+	}
 
 	public static void main(String[] args) {
 		foo();

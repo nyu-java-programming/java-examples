@@ -10,7 +10,7 @@ import processing.core.*;
 public class KochSnowflake extends PApplet {
 
 	public static void main(String[] args) {
-		PApplet.main("edu.nyu.cs.fb1258.recursion_examples.koch_snowflake.KochSnowflake");
+		PApplet.main("edu.nyu.cs.fb1258.fractals.koch_snowflake.KochSnowflake");
 	}
 	
 	/**

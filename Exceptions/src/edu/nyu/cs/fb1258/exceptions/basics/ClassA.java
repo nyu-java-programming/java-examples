@@ -12,7 +12,6 @@ public class ClassA {
 		System.out.println(line);
 	}
 	
-
 	public static void main(String[] args) {
 		String filename = "non_existent_file.txt";
 		boolean open = false;
