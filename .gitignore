@@ -46,6 +46,7 @@ Thumbs.db
 */doc/
 bin/
 doc/
+.metadata/
 
 # Visual Studio Code #
 ######################
