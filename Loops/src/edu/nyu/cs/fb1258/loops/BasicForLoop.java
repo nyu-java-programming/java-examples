@@ -13,7 +13,7 @@ public class BasicForLoop {
 		// an array of strings
 		String[] messages = {
 				"hi",
-				"how are you?",
+				"how are youuuuuuuuuuuu?",
 				"how's it going?",
 				"good to see you!",
 				"have a great day!",
